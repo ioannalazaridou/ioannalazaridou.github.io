@@ -15,6 +15,7 @@
 </head>
 <body>
   <main id="main" class="container text-center">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">︿</button>
     <nav id="navbar">
       <input type="checkbox" id="nav" class="hidden">
       <label for="nav" class="nav-btn">
@@ -86,7 +87,7 @@
         <div class="projimage">
           <a class="projlink" target="_blank"><img class="projectimage" src="https://images.unsplash.com/photo-1544221920-478f751f8835?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=831&q=80"></img></a>
           <h1 class="projtitle">WheelYouHelp</h1>
-          <p class="mywork" style="color:#4dac90">RESEARCH| UX | UI | MOCKUPS DESIGN</p>
+          <p class="mywork" style="color:#4dac90">RESEARCH | UX | UI | MOCKUPS DESIGN</p>
           </div>
       </div>
       </div>
@@ -125,5 +126,26 @@
     </div>
   </section>
   </main>
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
 </body>
 </html>
