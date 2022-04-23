@@ -25,7 +25,7 @@
       </label>
       <div class="image-header">
         <a href="#welcome-section"><img class="logo" src="static/images/JL.png"/></a>
-         
+
         </div>
       <div class="nav-links">
       <a class="nav-link" id="navlink1" href="#welcome-section">Home</a>
@@ -34,7 +34,7 @@
       <a class="nav-link" id="navlink4" href="#services">Services</a>
        <a class="nav-link" id="navlink5" href="#contact">Contact</a>
       </div>
-    </nav>  
+    </nav>
     <section id="welcome-section" tabindex="-1">
        <div class="welcome-info">
           <h1 class="welcome-text1">IOANNA LAZARIDOU</h1>
@@ -42,16 +42,17 @@
        </div>
        <div class="fontss" style="margin-top:10vh;">
         <div class="uiux">
-          <h1 class="uiuxitem">UI<br>UX</h1> 
+          <h1 class="uiuxitem">UI<br>UX</h1>
          </div>
-      </div> 
+      </div>
       <div class="fontss" style="margin-left:-50%; margin-top:80vh;">
         <div class="uiux">
-          <h1 class="uiuxitem">WEB<br>DEV</h1> 
+          <h1 class="uiuxitem">WEB<br>DEV</h1>
          </div>
-      </div> 
-   
+      </div>
+
     </section>
+    <div class="reveal fade-bottom">
     <section id="about" tabindex="-1">
       <div class="myphoto">
         <img class="myimage" src="static/images/ioanna.jfif"/>
@@ -63,9 +64,11 @@
         </p>
       </div>
     </section>
+</div>
     <section id="projects" tabindex="-1">
       <div style="display:flex; flex-direction:column; width:100%;">
       <h1 class="sectionheader">Projects</h1>
+      <div class="reveal fade-bottom">
       <div class="project-tile">
         <div class="projimage">
         <a class="projlink"  href="https://www.lavarchitecture.com/" target="_blank"><img class="projectimage" src="https://www.lavarchitecture.com/images/Kitchen_Reception%20_18_Chopwell_Close_Stratford_E15_4RP_[17.jpg"></img></a>
@@ -78,6 +81,8 @@
         <p class="mywork" style="color:#ef3f5d;">LANDING PAGE DESIGN | LANDING PAGE DEVELOPMENT (HTML, CSS, JS)</p>
         </div>
       </div>
+  </div>
+  <div class="reveal fade-bottom">
       <div class="project-tile">
         <div class="projimage">
         <a class="projlink" target="_blank"><img class="projectimage" src="https://images.unsplash.com/photo-1487875961445-47a00398c267?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"></img></a>
@@ -90,6 +95,7 @@
           <p class="mywork" style="color:#4dac90">RESEARCH | UX | UI | MOCKUPS DESIGN</p>
           </div>
       </div>
+  </div>
       </div>
 <!--       <a id="profile-link" target="_blank">
       </a> -->
@@ -97,16 +103,19 @@
 <section id="services" tabindex="-1">
    <div class="servicewrap">
   <h1 class="sectionheader">Services</h1>
+  <div class="reveal fade-bottom">
      <p class="skills">UX | UI DESIGN | RESEARCH | WEB DESIGN | APP DESIGN | WEB DEVELOPMENT | APP DEVELOPMENT</p>
      <p class="tools">HTML | CSS | JAVASCRIPT | REACT | REACT NATIVE | DJANGO | FIGMA</p>
      <a id="profile-link" target="_blank" href="https://github.com/ioannalazaridou"> Check My Work ➔
       </a>
+  </div>
   </div>
 </section>
 <section id="contact" tabindex="-1">
   <div style="display:flex; flex-direction:column; width:100%;">
   <h1 class="sectionheader">Contact</h1>
     <p style="color:#9aa5b8; margin-top:-2%; padding:1rem; padding-bottom:2rem;">Let's have a talk so you can see and learn more of my work!</p>
+<div class="reveal fade-bottom">
     <div class="contactinfo">
       <div class="contactsection">
          <img src="https://i.ibb.co/7RT2WTQ/email-1.png" class="contactimg"/>
@@ -118,9 +127,10 @@
       </div>
         <div class="contactsection">
         <img src="https://i.ibb.co/TkMctRz/phone.png" class="contactimg"/>
-          
+
         <a class="contactpar">+30 6987171903</a>
       </div>
+  </div>
     </div>
      <p class="footnote"> © Copyrigh 2021 Ioanna Lazaridou | All Rights Reserved. </p>
     </div>
@@ -129,10 +139,10 @@
   <script>
     //Get the button
     var mybutton = document.getElementById("myBtn");
-    
+
     // When the user scrolls down 20px from the top of the document, show the button
     window.onscroll = function() {scrollFunction()};
-    
+
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
@@ -140,12 +150,31 @@
         mybutton.style.display = "none";
       }
     }
-    
+
     // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
     </script>
+    <script>
+  function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+</script>
 </body>
 </html>
