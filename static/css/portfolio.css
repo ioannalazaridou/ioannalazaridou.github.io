@@ -694,7 +694,6 @@ a.nav-link:focus ~ .nav-links{
 }
 
 /* animation  */
-
 .reveal {
   position: relative;
   opacity: 0;
