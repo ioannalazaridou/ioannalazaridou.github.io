@@ -53,17 +53,25 @@
 
     </section>
     <div class="reveal fade-bottom">
-    <section id="about" tabindex="-1">
-      <div class="myphoto">
-        <img class="myimage" src="static/images/ioanna.jfif"/>
-      </div>
-      <div class="mytext">
-         <h1 id="aboutmeheader">Ioanna<br>Lazaridou</h1>
-        <p id="aboutme">
-          I’m Ioanna, a UX/UI designer and a front-end developer based in Athens, Greece, who has a passion for creating amazing user experiences and interactions through design. With a degree in Management Science and Technology I have a strong foundation in my business mindset alongside with programming skills that help me realize the value of developing desirable products that balance user needs and business goals. My love for designing and developing human-computer interactions is what pushed me into the UX/UI industry, where I have gained significant work experience through my involvement with important European Projects. <br>Besides my love for design, I enjoy traveling, painting and playing tennis. <br><br>If you want to learn more about me, let’s have a talk, I’d love to hear from you!
-        </p>
-      </div>
-    </section>
+    <div class="about-section">
+        <section id="about" tabindex="-1">
+          <div class="rowbox">
+          <div class="myphoto" style="flex:1;">
+              <!-- <div class="rectangle"></div>
+              <div class="rectangle"></div>
+              <div class="rectangle"></div>
+              <div class="rectangle"></div> -->
+            <img class="myimage" src="static/images/meee.png"/>
+          </div>
+          <div class="titletextblock" id="aboutmetextblock" style="flex:3; align-items:flex-start">
+             <h1 id="aboutmeheader">Ioanna<br>Lazaridou</h1>
+            <p class="paragraph" style="margin-top:-3%;">
+              I’m Ioanna, a UX/UI designer and a front-end developer based in London, UK, currently pursuing a degree in Human Computer Interaction at UCL. I have a passion for creating amazing user experiences and interactions through design. With a degree in Management Science and Technology I have a strong foundation in my business mindset alongside with programming skills that help me realize the value of developing desirable products that balance user needs and business goals. My love for designing and developing human-computer interactions is what pushed me into the UX/UI industry, where I have gained significant work experience through my involvement with important European Projects. <br>Besides my love for HCI, I enjoy traveling, painting and playing tennis. <br><br>If you want to learn more about me, let’s have a talk, I’d love to hear from you!
+            </p>
+          </div>
+        </div>
+        </section>
+    </div>
 </div>
     <section id="projects" tabindex="-1">
       <div style="display:flex; flex-direction:column; width:100%;">
@@ -71,28 +79,28 @@
       <div class="reveal fade-bottom">
       <div class="project-tile">
         <div class="projimage">
-        <a class="projlink"  href="https://www.lavarchitecture.com/" target="_blank"><img class="projectimage" src="https://www.lavarchitecture.com/images/Kitchen_Reception%20_18_Chopwell_Close_Stratford_E15_4RP_[17.jpg"></img></a>
-        <h1 class="projtitle">LAV - Architect's Portfolio</h1>
-        <p class="mywork">WEBSITE DESIGN | WEBSITE DEVELOPMENT (HTML, CSS, JS)</p>
+        <a class="projlink"  href="/Projects/LAV"><img class="projectimage" src="static/images/111.png"></a>
+        <h1 class="projtitle">LAV - Architecture</h1>
+        <p class="mywork">USER RESEARCH | UX DESIGN | WEBSITE DESIGN | WEBSITE DEVELOPMENT (HTML, CSS, JS)</p>
         </div>
         <div class="projimage">
-        <a class="projlink" href="https://codepen.io/ilazaridou/full/JjyGGMQ" target="_blank"><img class="projectimage" src="https://images.unsplash.com/photo-1545086421-168708d4f603?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1333&q=80"></img></a>
-        <h1 class="projtitle">COFFEE SHOP</h1>
-        <p class="mywork" style="color:#ef3f5d;">LANDING PAGE DESIGN | LANDING PAGE DEVELOPMENT (HTML, CSS, JS)</p>
+        <a class="projlink" href="/Projects/iFLEX"><img class="projectimage" src="static/images/222.png"></a>
+        <h1 class="projtitle">iFLEX - Energy</h1>
+        <p class="mywork" style="color:#35AEFF;">UX/UI DESIGN | USER TESTING | MOBILE APP DEVELOPMENT (REACT NATIVE)</p>
         </div>
       </div>
   </div>
   <div class="reveal fade-bottom">
       <div class="project-tile">
         <div class="projimage">
-        <a class="projlink" target="_blank"><img class="projectimage" src="https://images.unsplash.com/photo-1487875961445-47a00398c267?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"></img></a>
-        <h1 class="projtitle">iFLEX - Mobile App Assistant</h1>
-        <p class="mywork" style="color:#ac834d">UX | UI | MOCKUPS DESIGN | MOBILE APP DEVELOPMENT (REACT NATIVE)</p>
+        <a class="projlink" href="/Projects/Yemaya"><img class="projectimage" src="static/images/3.png"></a>
+        <h1 class="projtitle">Yemaya - Health and Women Empowerment</h1>
+        <p class="mywork" style="color:#BD29D8">USER RESEARCH | UX DESIGN | WIREFRAMING | PROTOTYPING</p>
         </div>
         <div class="projimage">
-          <a class="projlink" target="_blank"><img class="projectimage" src="https://images.unsplash.com/photo-1544221920-478f751f8835?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=831&q=80"></img></a>
-          <h1 class="projtitle">WheelYouHelp</h1>
-          <p class="mywork" style="color:#4dac90">RESEARCH | UX | UI | MOCKUPS DESIGN</p>
+          <a class="projlink" href="/Projects/Pause"><img class="projectimage" src="static/images/4.png"></a>
+          <h1 class="projtitle">Pause - Digital Behaviour Change Intervention</h1>
+          <p class="mywork" style="color:#ef3f5d">USER RESEARCH | UX DESIGN | WIREFRAMING | PROTOTYPING | USER TESTING</p>
           </div>
       </div>
   </div>
@@ -104,8 +112,8 @@
    <div class="servicewrap">
   <h1 class="sectionheader">Services</h1>
   <div class="reveal fade-bottom">
-     <p class="skills">UX | UI DESIGN | RESEARCH | WEB DESIGN | APP DESIGN | WEB DEVELOPMENT | APP DEVELOPMENT</p>
-     <p class="tools">HTML | CSS | JAVASCRIPT | REACT | REACT NATIVE | DJANGO | FIGMA</p>
+     <p class="skills">UX RESEARCH | UX/UI DESIGN | USER RESEARCH | WEB DESIGN | WEB DEVELOPMENT | APP DEVELOPMENT</p>
+     <p class="tools">FIGMA | HTML | CSS | JAVASCRIPT | REACT | REACT NATIVE | DJANGO</p>
      <a id="profile-link" target="_blank" href="https://github.com/ioannalazaridou"> Check My Work ➔
       </a>
   </div>
@@ -114,7 +122,7 @@
 <section id="contact" tabindex="-1">
   <div style="display:flex; flex-direction:column; width:100%;">
   <h1 class="sectionheader">Contact</h1>
-    <p style="color:#9aa5b8; margin-top:-2%; padding:1rem; padding-bottom:2rem;">Let's have a talk so you can see and learn more of my work!</p>
+    <p style="color:#9aa5b8; margin-top:-2%; padding:1rem; padding-bottom:2rem;">Let's have a talk so you can learn more about my work!</p>
 <div class="reveal fade-bottom">
     <div class="contactinfo">
       <div class="contactsection">
@@ -128,11 +136,12 @@
         <div class="contactsection">
         <img src="https://i.ibb.co/TkMctRz/phone.png" class="contactimg"/>
 
-        <a class="contactpar">+30 6987171903</a>
+        <a class="contactpar">+30 6987171903 <br> +44 7818260729</a>
       </div>
   </div>
     </div>
-     <p class="footnote"> © Copyrigh 2021 Ioanna Lazaridou | All Rights Reserved. </p>
+     <!-- <p class="footnote"> ©  Copyright&nbsp;<span id="demo"></span> &nbsp; Ioanna Lazaridou | All Rights Reserved. </p> -->
+     <div class="footnote"><p>©  Copyright&nbsp;<span id="demo"></span> &nbsp;Ioanna Lazaridou | All rights reserved.</p></div>
     </div>
   </section>
   </main>
@@ -151,6 +160,7 @@
       }
     }
 
+    // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
@@ -175,5 +185,11 @@
 
 window.addEventListener("scroll", reveal);
 </script>
+
 </body>
+<script>
+const d = new Date();
+let year = d.getFullYear();
+document.getElementById("demo").innerHTML = year;
+</script>
 </html>
