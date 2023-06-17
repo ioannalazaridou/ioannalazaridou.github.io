@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <link href="../static/css/portfolio.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fc596df623.js" crossorigin="anonymous"></script>
+    <title>Yemaya</title>
+    <style>
+      :root {
+        --background-color: #212121;
+        --font: sans-serif;
+      }
+      
+      section {
+        max-width: 100vw;
+      }
+    
+      
+      body {
+        background: #1b1c21;
+        display: flex;
+        justify-content: center;
+          max-width: 100%;
+      }
+      .timeline__event__content {
+        border:1px solid #BD29D8;
+      }
+    </style>
+</head>
+<body>
+  <main id="main" class="container text-center">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">︿</button>
+    <nav id="navbar">
+      <input type="checkbox" id="nav" class="hidden">
+      <label for="nav" class="nav-btn">
+        <i></i>
+        <i></i>
+        <i></i>
+      </label>
+      <div class="image-header">
+        <a href="#welcome-section"><img class="logo" src="../static/images/JL.png"/></a>
+      </div>
+      <div class="nav-links" style="justify-content: flex-end;">
+        <a class="nav-link" id="navlink1" href="../index.html#projects">⬅ Back to Projects</a>
+        <!-- <a class="nav-link" id="navlink2" href="#about">About</a>
+        <a class="nav-link" id="navlink3" href="#projects">Projects</a>
+        <a class="nav-link" id="navlink4" href="#services">Services</a> -->
+        <!-- <a class="nav-link" id="navlink5" href="#contact">Contact</a> -->
+      </div>
+    </nav>
+    <!-- <section id="project-section" tabindex="-1" style="margin-top:8%;">
+       <div class="project-info">
+        
+          <h1 class="project-name" id="project-title">Yemaya</h1>
+          <h2 class="project-description">A brief description of the project and its goals</h2>
+       </div>
+    </section> -->
+    <section id="welcome-projects" style="background:#767372; padding:unset;" tabindex="-1">
+      <img class="projectTopImage" src="../static/images/yemaya/yemaya.png" alt="Yemaya">
+      <div class="aboutparagraph" id="projectsTextImage" style="padding-bottom:1rem; position: absolute; ">
+        <p class="projectsName" style="color:rgba(255,255,255,1)">
+          Yemaya </p>
+          <!-- <br>
+          <p style="color:rgba(255,255,255,1)" class="fonts2"> Yemaya is a digital assistant designed to provide accessible and relatable support for pregnant women, aiming to promote informed decision-making, improve maternal and neonatal health outcomes, and empower women with a sense of agency over their pregnancy.
+         </p> -->
+      </div>
+    </section>
+    <section>
+      <div class="project-description">
+        <p class="paragraph" style="padding:2rem; flex:1;"> Yemaya is a digital assistant designed to provide accessible and relatable support for pregnant women, aiming to promote informed decision-making, improve maternal and neonatal health outcomes, and empower women with a sense of agency over their pregnancy.
+        </p>
+        <div class="details" style="padding-right:2rem; padding-left:2rem; flex:2;">
+          <p class="paragraph" style="font-weight:500; color:#BD29D8; padding:0rem; border-bottom:1px solid #9AA5B8">Aim</p>
+          <p class="paragraph" style="padding:0.5rem;">Addressing the United Nations Sustainable Development Goals (SDG) 3 and 5</p>
+          <p class="paragraph" style="font-weight:500; color:#BD29D8; padding:0rem; border-bottom:1px solid #9AA5B8">Duration</p>
+          <p class="paragraph" style="padding:0.5rem;">September 2022 - December 2022 | 3 months</p>
+          <p class="paragraph" style="font-weight:500; color:#BD29D8; padding:0rem; border-bottom:1px solid #9AA5B8">Client</p>
+          <p class="paragraph" style="padding:0.5rem;">Group Project for Interaction Design Module during MSc in HCI</p>
+          <p class="paragraph" style="font-weight:500; color:#BD29D8; padding:0rem; border-bottom:1px solid #9AA5B8">Role</p>
+          <p class="paragraph" style="padding:0.5rem;">User Research, UX Design, Wireframing, Prototyping</p>
+          <p class="paragraph" style="font-weight:500; color:#BD29D8; padding:0rem; border-bottom:1px solid #9AA5B8">Tools</p>
+          <p class="paragraph" style="padding:0.5rem;">Microsoft Forms, Figma, Miro</p>
+          
+        </div>
+      </div>
+    </section>
+    <section class="userresearch" tabindex="-1">
+      <div style="display:flex; flex-direction:column; justify-content:center; align-items:center;">
+        <video class="reveal fade-bottom" width="30%" autoplay muted>
+          <source src="../static/images/yemaya/video.mov" >
+          <!-- <source src="../movie.ogg" type="video/ogg"> -->
+        Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+    <section class="timelinesection" style="background:#1B1B21">
+      <div class="timeline">
+        <!--first-->
+        <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+          <div class="timeline__event__icon ">
+            <!-- <i class="lni-sport"></i>-->
+      
+          </div>
+          <a class="timeline__event__content" href="#backgroundsection">
+            <div class="timeline__event__title">
+              Background Research
+            </div>
+          </a>
+        </div>
+      
+        <!--second-->
+      
+        <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+          <div class="timeline__event__icon">
+            <!-- <i class="lni-sport"></i>-->
+      
+          </div>
+          <a class="timeline__event__content" href="#userresearchsection">
+            <div class="timeline__event__title">
+              User Research
+            </div>
+          </a>
+        </div>
+      
+        <!--third-->
+      
+        <div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+          <div class="timeline__event__icon">
+            <!-- <i class="lni-sport"></i>-->
+      
+          </div>
+          <a class="timeline__event__content" href="#designideationsection">
+            <div class="timeline__event__title">
+              Design Ideation
+            </div>
+          </a>
+        </div>
+      
+        <!--forth-->
+      
+        <div class="timeline__event animated fadeInUp timeline__event--type1">
+          <div class="timeline__event__icon">
+            <!-- <i class="lni-sport"></i>-->
+      
+          </div>
+          <a class="timeline__event__content" href="#testinginteractionssection">
+            <div class="timeline__event__title">
+              Testing Interactions
+            </div>
+          </a>
+        </div>
+      
+        <!--first-->
+        <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+          <div class="timeline__event__icon ">
+            <!-- <i class="lni-sport"></i>-->
+      
+          </div>
+          <a class="timeline__event__content" href="#informationarchitecturesection">
+            <div class="timeline__event__title" >
+              Information Architecture
+            </div>
+          </a>
+        </div>
+      
+        <!--second-->
+      
+        <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+          <div class="timeline__event__icon">
+            <!-- <i class="lni-sport"></i>-->
+      
+          </div>
+          <a class="timeline__event__content" href="#prototypesection">
+            <div class="timeline__event__title">
+              Prototype
+            </div>
+          </a>
+        </div>
+      
+        <!--third-->
+      
+        <!-- <div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+          <div class="timeline__event__icon">
+      
+          </div>
+          <div class="timeline__event__content">
+            <div class="timeline__event__title">
+              Super Mario Land: 6 Golden Coins
+            </div>
+      
+          </div>
+        </div>
+      
+        <div class="timeline__event animated fadeInUp timeline__event--type1">
+          <div class="timeline__event__icon">
+      
+          </div>
+          <div class="timeline__event__content">
+            <div class="timeline__event__title">
+              Super Mario World 2: Yoshi's Island
+            </div>
+          </div>
+        </div>
+       -->
+        
+      </div>
+       </section>
+      <section class="userresearch" tabindex="-1"  id="backgroundsection">
+        <div style="display:flex; flex-direction:column; width:100%;">
+        <h1 class="sectionheader">Background</h1>
+        <div class="titletextblock">
+          <p class="paragraph" style="padding-right:2rem; "> Despite the UN SDG target of reducing maternal mortality rates, the global rate of maternal deaths per 100,000 live births is over three-fold greater than the target. Complications during pregnancy are a major cause of death in children under five, especially in low- and middle-income countries. Many of these deaths can be prevented or treated if proper healthcare is available early on. Therefore, it is crucial to improve access to and utilization of good-quality prenatal care to lower maternal and infant mortality rates in developing areas.</p>
+          
+        </div>
+        </div>
+      </section>
+      <section class="background" tabindex="-1" id="userresearchsection">
+        <div style="display:flex; flex-direction:column; width:100%;">
+          <h1 class="sectionheader">User Research</h1>
+          <div class="rowbox">
+            <div class="titletextblock">
+              <h1 class="projtitle" style="color: #BD29D8;">Methodology</h1>
+              <p class="paragraph" style="padding-right:2rem; padding-left:2rem;"> We conducted research to gain insights into pregnancy tools and users. Based on our understanding of the problem landscape, we conducted a mixed-methods survey. The survey involved 83 participants primarily from the UK, South Africa, US, Greece, and Japan. Most participants were married/in a relationship, aged 20-39, and had previous childbirth experience.</p>
+            </div>
+            <div class="titletextblock" style="flex:2">
+              <h1 class="projtitle" style="color: #BD29D8;">Quantitative Insights</h1>
+              <p class="paragraph" style="padding-right:2rem; padding-left:2rem;"> -Primary information sources were friends/family, medical providers, and search engines.<br>
+                -Medical providers were most trusted, but friends/family were rated highest for enjoyment/relatability.<br>
+                -Friends/family offer accessible, supportive, and relatable information, while medical professionals are seen as inaccessible and medicalized.<br>
+                -Majority relied on parents and friends for social support.</p>
+              <h1 class="projtitle" style="color: #BD29D8;">Qualitative Insights</h1>
+              <p class="paragraph" style="padding-right:2rem; padding-left:2rem;"> Women seek greater agency in pregnancy due to limited confidence, medical language challenges, poor provider relationships, and lack of reliable information.</p>
+            </div>
+          </div>
+          <div class="quotebox">
+            <p class="paragraph quote">Valuable insights and understandings about the problem, users, and their needs were generated by utilizing parsing and framing methodologies on the data collected during the discovery phase.</p>
+          </div>
+         
+            <div class="titletextblock" style="justify-content: center; align-items: center;">
+              <p class="paragraph" style="padding:unset; padding-right:2rem; padding-left:2rem; width:unset;"> We constructed an affinity diagram of the most relevant themes from initial research. This process revealed crucial issues, creating multiple opportunities and a clearer direction. </p>
+              <img class="processimg reveal fade-bottom" src="../static/images/yemaya/affinitymap.jpg" alt="Yemaya">
+            </div>
+          
+          <div class="titletextblock" style="justify-content: center; align-items: center;">
+            <p class="paragraph" style="padding:unset; padding-right:2rem; padding-left:2rem; width:unset;"> To ensure that our problem was grounded in users’ needs, we developed 4 user personas to empathise with the challenges and goals of pregnant women. The objective was to sufficiently portray the various users and their possible requirements. </p>
+            <img class="processimg laptop reveal fade-bottom"style="width:100%" src="../static/images/yemaya/userpersonnas.png" alt="Yemaya">
+            <img class="processimg mobile reveal fade-bottom"style="width:70%;" src="../static/images/yemaya/userpersonnas2.png" alt="Yemaya">
+          </div>
+          <div class="quotebox">
+            <p class="paragraph" style="width:100%; text-align:center; padding:1rem">Through this, we defined our core problem statement to guide our design solution: <br><span style="font-weight:500; color:white">Pregnant women lack agency over their pregnancy due to low confidence in their own knowledge and capabilities.</span></p>
+          </div>
+          <div class="quotebox">
+            <p class="paragraph quote" style="color:#BD29D8; padding:1rem">How might we design digital interventions to facilitate the needs of pregnant women by providing trusted and relatable information, and promoting agency in managing their health?</p>
+          </div>
+          <div class="rowbox">
+            <div class="titletextblock" style="justify-content: center; align-items: center;">
+              <p class="paragraph" style="padding:unset; padding-right:2rem; padding-left:2rem; width:unset;"> Based on our problem statement, we ideated potential solutions by collectively generating 40 ideas through crazy-eights rapid sketching. </p>
+              <img class="processimg reveal fade-bottom"style="width:100%" src="../static/images/yemaya/crazy8.png" alt="Yemaya">
+            </div>
+            <div class="titletextblock" style="justify-content: center; align-items: center;">
+              <p class="paragraph" style="padding:unset; padding-right:2rem; padding-left:2rem; width:unset;">We generated multiple ideas and simplified them into basic concepts. These concepts were organized based on common interfaces and information-seeking issues. To determine the best direction, we created evaluation matrices to compare the ideas. Finally, team members participated in dot voting to select the winning solution. </p>
+              <img class="processimg reveal fade-bottom"style="width:100%" src="../static/images/yemaya/evaluation.png" alt="Yemaya">
+              <p class="paragraph" style="padding:unset; padding-right:2rem; padding-left:2rem; width:unset;"> Three main design directions were selected: <br>
+                1. A physical device that would support sensemaking of physiological information; <br>
+                2. Systems that foster social interaction between mothers to promote sharing of information and support; <br>
+                3. A digital assistant that would help address information-seeking needs.<br>
+                <span style="color:#BD29D8">Evaluating these in relation to our problem statement and design constraints, a digital assistant was selected as the most viable and effective direction. </span></p>
+            </div>
+          </div>
+        </div>
+       
+      </section>
+      <section class="userresearch" tabindex="-1" id="designideationsection">
+        <div style="display:flex; flex-direction:column; width:100%;">
+        <h1 class="sectionheader">Design Ideation</h1>
+        <div class="rowbox" style="justify-content:flex-start; align-items:unset;">
+          <div class="titletextblock">
+            <h1 class="projtitle" style="color: #BD29D8;">Methodology</h1>
+            <p class="paragraph" style="padding-right:2rem; padding-left:2rem;"> To specify the requirements of an information-seeking assistant, we conducted in-depth semi-structured interviews with three previously-pregnant women, aged 30–40, from South Africa and USA. The interviews explored self-directed information-seeking during pregnancy in relation to agency. Core insights were generated through an inductive thematic analysis.</p>
+            <!-- <h1 class="projtitle" style="color: #BD29D8;">Insights</h1>
+            <p class="paragraph" style="padding-right:2rem; padding-left:2rem;"> Pregnant women sought information beyond medical consultations to understand their pregnancy and alleviate concerns, highlighting the need for empowerment and reassurance. They relied on a trusted information source but also turned to online or social sources for unexpected concerns. A personalized comprehensive information source was desired, as well as a reliable informational companion, since involving friends and family in medical aspects of pregnancy was often unfeasible.</p>
+           -->
+          </div>
+          <div class="titletextblock" >
+            <h1 class="projtitle" style="color: #BD29D8;">Insights</h1>
+            <p class="paragraph" style="padding-right:2rem; padding-left:2rem;"> Based on the insights and with a strong grasp of the information-seeking problems of users, we specified users’ core interactions</p>
+            <img class="processimg reveal fade-bottom"style="width:100%" src="../static/images/yemaya/interactions.png" alt="Yemaya">
+            <p class="paragraph" style="padding-right:2rem; padding-left:2rem;"> Through this, the system requirements were outlined as follows:<br>
+              • Integrate with messaging channels for information exchange; <br>
+              • Generate reliable responses by using a trusted pregnancy source database; <br>
+              • Organize and store information for user access; <br>
+              • Simplify medical information into understandable language; <br>
+              • Incorporate user data into response content; <br>
+              • Allow users to customize the assistant's appearance and personality.</p>
+          </div>
+        </div>
+        </div>
+      </section>
+      <section class="background" tabindex="-1" id="testinginteractionssection">
+        <div style="display:flex; flex-direction:column; width:100%;">
+          <h1 class="sectionheader">Testing Interactions</h1>
+          <!-- <div class="backgrounddetails"> -->
+            <div class="rowbox" >
+            <div class="titletextblock">
+              <h1 class="projtitle" style="color: #BD29D8;">Methodology</h1>
+              <p class="paragraph" style="padding-right:2rem; padding-left:2rem;"> Four participants from different countries interacted with a proposed assistant to seek information. They explored four imagined pregnancy scenarios through a WhatsApp conversation using a Wizard of Oz approach. We acted as the assistant, assessing users' experiences through the "think aloud" method and follow-up interviews.
+              </p>
+              <h1 class="projtitle" style="color: #BD29D8;">Insights</h1>
+              <p class="paragraph" style="padding-right:2rem; padding-left:2rem;"> 
+
+Participants found the assistant useful, providing immediate, relevant, and trusted information. They valued informative answers over comforting phrases and appreciated the empathy. Engaging through a native channel was effective, especially for users with data constraints. The conversational assistant made information feel personal, empowering, and secure.
+              </p>
+            </div>
+            <img class="processimg reveal fade-bottom"style="width:40%; padding:2rem;" src="../static/images/yemaya/test.png" alt="Yemaya">
+          </div>
+          <!-- </div> -->
+        </div>
+      </section>
+      <section class="userresearch" tabindex="-1" id="informationarchitecturesection">
+        <div style="display:flex; flex-direction:column; width:100%;">
+        <h1 class="sectionheader">Information Architecture</h1>
+        <div class="rowbox" style="align-items:unset;">
+          <div class="titletextblock">
+            <p class="paragraph" style="padding-right:2rem; padding-left:2rem;"> Concluding that the core interactions between the assistant and user could satisfy the user’s central needs, we generated a storyboard to envision how users might engage with a product that supports the core information-seeking interactions.</p>
+            <img class="processimg laptop reveal fade-bottom"style="width:100%;" src="../static/images/yemaya/storyboard.png" alt="Yemaya">
+            <img class="processimg mobile reveal fade-bottom"style="width:100%;" src="../static/images/yemaya/storyboard2.png" alt="Yemaya">
+          </div>
+          <div class="titletextblock">
+            <p class="paragraph" style="padding-right:2rem; padding-left:2rem;"> Using a task analysis, I developed a user story map to depict the activities and tasks a user undergoes while using our product. This helped organize and prioritize the user's activities and tasks within the system.</p>
+            <img class="processimg reveal fade-bottom"style="width:100%;" src="../static/images/yemaya/userstories.png" alt="Yemaya">
+            <p class="paragraph" style="padding-right:2rem; padding-left:2rem;"> To comprehend the structure of our app and how it integrates with multiple channels, I generated a sitemap </p>
+            <img class="processimg reveal fade-bottom"style="width:100%;" src="../static/images/yemaya/sitemap.png" alt="Yemaya">
+          </div>
+        </div>
+        </div>
+      </section>
+      <section class="background" tabindex="-1" id="prototypesection">
+        <div style="display:flex; flex-direction:column; width:100%;">
+          <h1 class="sectionheader">Prototype</h1>
+          <!-- <div class="backgrounddetails"> -->
+          <div class="rowbox" >
+            <div class="titletextblock">
+              <p class="paragraph" style="padding-right:2rem; padding-left:2rem;"> Using findings from interaction testing, I created low-fidelity wireframes to design our application.
+              </p>
+            </div>
+            <img class="processimg reveal fade-bottom"style="width:30%;" src="../static/images/yemaya/wireframes.png" alt="Yemaya">
+            <div class="titletextblock">
+              <p class="paragraph" style="padding-right:2rem; padding-left:2rem;"> After iterating, I rendered the high-fidelity flows for the product's communication and onboarding elements.
+              </p>
+            </div>
+          </div>
+          <div style="display:flex; justify-content: center; padding-top:3rem;">
+          <p class="paragraph" style="padding-right:2rem; padding-left:2rem;"> <span style="font-weight:600; color:#BD29D8">Introducing Yeamaya</span> Using advances in natural language processing technologies and recent developments in natural language generation, the assistant facilitates familiar interactions through conversation.
+          </p>
+        </div>
+          <div class="rowbox" >
+            <div class="titletextblock">
+              <p class="paragraph" style="padding-right:2rem; padding-left:2rem; flex:1"> Upon downloading the Yemaya app, users complete an onboarding process by providing personal information and health data. Users can then set up their personalized assistant for improved engagement and comfort. Yemaya offers customization options for the assistant's appearance, including avatars that can be customized to personal preference.
+
+                <br><br>Yemaya introduces a unique feature allowing users to use code words to discuss sensitive health issues. The app remembers these code words for future conversations, enhancing privacy and preventing others from overhearing or seeing the discussion. </p>
+            </div>
+            <div style="flex:2">
+              <img class="processimg reveal fade-bottom"style="width:80%" src="../static/images/yemaya/mockups1.png" alt="Yemaya">
+            </div>
+          </div>
+          <div class="rowbox" >
+            <div style="flex:2">
+              <img class="processimg reveal fade-bottom"style="width:80%" src="../static/images/yemaya/mockups2.png" alt="Yemaya">
+            </div>
+            <div class="titletextblock">
+              <p class="paragraph" style="padding-right:2rem; padding-left:2rem; flex:1"> Yemaya, a chatbot assistant, understands and responds to mothers' questions and concerns, considering their context. It provides up-to-date medical information, simplifies complex jargon, and fact-checks shared resources.
+                <br><br>
+                Yemaya remembers users' health concerns and can follow up on their progress. It assists in remembering important questions for doctor's appointments.
+                <br><br>
+                For privacy, Yemaya can be added as a phone contact and accessed through messaging apps like WhatsApp with minimal data usage.</p>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </section>
+      <section class="userresearch" tabindex="-1">
+        <div style="display:flex; flex-direction:column; width:100%;">
+        <div class="backgrounddetails">
+          <p class="paragraph" style="padding-right:4rem; padding-left:4rem;"> Yemaya effectively addresses user pain points, providing an innovative digital solution for pregnant women to improve their experience and reduce complications. The health education component supports autonomy and aligns with UN SDG 5 and SDG 3. Integration with messaging apps ensures accessibility and privacy. The project advances HCI and allowed me to enhance my user research and visual design skills as the sole UI designer, progressing from low-fidelity to high-fidelity mockups.
+
+          <br><br>  If I were to redo this project, I would have evaluated the solution's usefulness among pregnant women specifically. Our participants, were not currently pregnant, potentially affecting the validity of our findings. Limited project scope prevented the implementation of all desired features, and the prototype needs additional high-fidelity testing. Further refining the user flow and exploring additional functionality can enhance the user experience.</p>
+            
+            
+        </div>
+        </div>
+      </section>
+      <!-- <section id="project-feedback" style="background-color:#1B1B21" tabindex="-1">
+          <h2 class="feedback-header">Feedback</h2>
+          <div class="feedback-quote" id="feedback1">
+            <p class="quote-text">"This project was incredibly well-designed and easy to use. I love the interactive visuals!" - User 1</p>
+          </div>
+          <div class="feedback-quote" id="feedback2">
+            <p class="quote-text">"The UX process was thorough and well-documented. I learned a lot from this project." - User 2</p>
+          </div>
+          <div class="feedback-quote" id="feedback3">
+            <p class="quote-text">"I was impressed by the attention to detail in the design and development of this project." - User 3</p>
+          </div>
+      </section> -->
+      <section id="contact" tabindex="-1">
+        <div style="display:flex; flex-direction:column; width:100%;">
+        <h1 class="sectionheader">Contact</h1>
+          <p style="color:#9aa5b8; margin-top:-2%; padding:1rem; padding-bottom:2rem;">Let's have a talk so you can learn more about my work!</p>
+      <div class="reveal fade-bottom">
+          <div class="contactinfo">
+            <div class="contactsection">
+               <img src="https://i.ibb.co/7RT2WTQ/email-1.png" class="contactimg"/>
+              <a class="contactpar" id="emailtext" href = "mailto: ioanna.lazaridou5@gmail.com">ioanna.lazaridou5@gmail.com</a>
+            </div>
+             <div class="contactsection">
+              <img src="https://i.ibb.co/YhMSRCp/linkedin.png" class="contactimg"/>
+              <a class="contactpar" href="https://www.linkedin.com/in/ioanna-lazaridou/" target="_blank">Ioanna Lazaridou</a>
+            </div>
+              <div class="contactsection">
+              <img src="https://i.ibb.co/TkMctRz/phone.png" class="contactimg"/>
+      
+              <a class="contactpar">+30 6987171903 <br> +44 7818260729</a>
+            </div>
+        </div>
+          </div>
+           <!-- <p class="footnote"> ©  Copyright&nbsp;<span id="demo"></span> &nbsp; Ioanna Lazaridou | All Rights Reserved. </p> -->
+           <div class="footnote"><p>©  Copyright&nbsp;<span id="demo"></span> &nbsp;Ioanna Lazaridou | All rights reserved.</p></div>
+          </div>
+        </section>
+    </main>
+    <script>
+      window.onload = function() {
+        var projectTitle = document.getElementById("project-title");
+        var words = projectTitle.innerHTML.split(" ");
+        projectTitle.innerHTML = "";
+        for (var i = 0; i < words.length; i++) {
+            var span = document.createElement("span");
+            span.innerHTML = words[i] + " ";
+            projectTitle.appendChild(span);
+        }
+        var spans = projectTitle.getElementsByTagName("span");
+        for (var i = 0; i < spans.length; i++) {
+            spans[i].style.animation = "fade-in 10s ease-out " + (i * 0.5) + "s both";
+        }
+      }
+    </script>
+    <script>
+      function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+    
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 100;
+    
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+    
+    window.addEventListener("scroll", reveal);
+    </script>
+    
+    </body>
+    <script>
+    const d = new Date();
+    let year = d.getFullYear();
+    document.getElementById("demo").innerHTML = year;
+    </script>
+  </body>
+  </html>
