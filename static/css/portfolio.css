@@ -224,7 +224,7 @@ a.nav-link:hover{
   text-align:left;
   font-size:400%;
    padding:1rem;
-  margin-left:10%;
+  margin-left:4%;
   font-weight:800;
   /* margin-bottom: unset; */
 }
@@ -711,6 +711,7 @@ padding-right:2rem;
   text-align: left;
   padding-left: 4rem;
   padding-right:4rem;
+width:80%;
 }
 
 @media screen and (max-width: 900px){
