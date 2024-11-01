@@ -221,10 +221,10 @@ a.nav-link:hover{
 .sectionheader {
   float:left;
   /* width:50%; */
-  text-align:left;
+  text-align:center;
   font-size:400%;
    padding:1rem;
-  margin-left:4%;
+/*   margin-left:4%; */
   font-weight:800;
   /* margin-bottom: unset; */
 }
