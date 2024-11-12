@@ -259,7 +259,7 @@ a.timeline__event__title {
    -moz-box-shadow:    inset 0 0 60px #000000;
   -webkit-box-shadow: inset 0 0 60px #000000;
   box-shadow:         inset 0 0 60px #000000;
-  filter:brightness(50%) ;
+  filter:brightness(80%) ;
 }
 
 .projtitle{
@@ -274,7 +274,7 @@ a.timeline__event__title {
 a.projlink:hover  .projectimage{
    transition-duration: 1s;
   transform: scale(1.02);
-  filter:brightness(80%) ;
+  filter:brightness(100%) ;
 }
 
 .skills{
@@ -1009,8 +1009,8 @@ width:80%;
 
 @media screen and (max-width:980px) and (min-width:768px){
   .myimage{
-    width:200px;
-    height:300px;
+    width:500px;
+    height:200px;
     top:20%;
   }
   .projectimage{
