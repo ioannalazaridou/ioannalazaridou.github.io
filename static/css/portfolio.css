@@ -950,6 +950,11 @@ width:80%;
   .titletextblock{
     padding:unset;
   }
+
+  .titletextblock p.paragraph{
+    padding-left:2rem;
+    padding-right:2rem;
+  }
   .mywork{
     padding-top:0rem;
     padding-bottom:2rem;
