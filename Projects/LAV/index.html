@@ -36,6 +36,11 @@
       .timeline__event__content {
         border:1px solid #f69b3b;
       }
+      .timeline-content {
+        background: #1B1B1B;
+        border: 2px solid #f69b3b;
+      }
+      
     </style>
 </head>
 <body>
@@ -107,78 +112,37 @@
       </div>
     </section>
     <section class="timelinesection">
+
       <div class="timeline">
-        <!--first-->
-        <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
-          <div class="timeline__event__icon ">
-            <!-- <i class="lni-sport"></i>-->
-      
-          </div>
-          <a class="timeline__event__content " href="#infogatheringsection">
-            <div class="timeline__event__title">
-              Information Gathering
+        <a href="#infogatheringsection"><div class="timeline-item">
+            <div class="timeline-content">
+                <p>Information Gathering</p>
             </div>
-          </a>
-        </div>
-      
-        <!--second-->
-      
-        <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
-          <div class="timeline__event__icon">
-            <!-- <i class="lni-sport"></i>-->
-      
-          </div>
-          <a class="timeline__event__content" href="#planningsection">
-            <div class="timeline__event__title" >
-             Planning
-            </div>
-          </a>
-        </div>
-      
-        <!--third-->
-      
-        <div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
-          <div class="timeline__event__icon">
-            <!-- <i class="lni-sport"></i>-->
-      
-          </div>
-          <a class="timeline__event__content" href="#designsection">
-            <div class="timeline__event__title" >
-              Design
-            </div>
-          </a>
-        </div>
-      
-        <!--forth-->
-      
-        <div class="timeline__event animated fadeInUp timeline__event--type1">
-          <div class="timeline__event__icon">
-            <!-- <i class="lni-sport"></i>-->
-      
-          </div>
-          <a class="timeline__event__content" href="#developtestsection">
-            <div class="timeline__event__title">
-              Development & Testing
-            </div>
-          </a>
-        </div>
-      
-        <!--first-->
-        <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
-          <div class="timeline__event__icon ">
-            <!-- <i class="lni-sport"></i>-->
-      
-          </div>
-          <a class="timeline__event__content" href="#launchsection">
-            <div class="timeline__event__title">
-             Launch
-            </div>
-          </a>
-        </div>
-      
+            <div class="timeline-dot"></div>
+        </div></a>
         
-      </div>
-       </section>
+        <a href="#planningsection"><div class="timeline-item">
+            <div class="timeline-content">
+                <p>Planning</p>
+            </div>
+            <div class="timeline-dot"></div>
+        </div></a>
+        
+        <a href="#designsection"> <div class="timeline-item">
+            <div class="timeline-content">
+                <p>Design</p>
+            </div>
+            <div class="timeline-dot"></div>
+        </div></a>
+        
+        <a href="#developtestsection"><div class="timeline-item">
+            <div class="timeline-content">
+                <p>Development & Launch</p>
+            </div>
+            <div class="timeline-dot"></div>
+        </div></a>
+        </div>
+      </section>
       <section class="background" id="infogatheringsection" tabindex="-1">
         <div style="display:flex; flex-direction:column; width:100%;">
         <h1 class="sectionheader">Information Gathering</h1>
@@ -262,7 +226,7 @@
             </section>
             <section class="userresearch" id="developtestsection" tabindex="-1">
               <div style="display:flex; flex-direction:column; width:100%;">
-                <h1 class="sectionheader">Development & Testing</h1>
+                <h1 class="sectionheader">Development & Launch</h1>
                 <div class="columnbox" >
                   <div class="titletextblock" style="flex:1;">
                     <p class="paragraph" style="padding-right:2rem; padding-left:2rem;"> Collaboratively with the client, we finalized the mockups and refined the website's content. Subsequently, I embarked on building the website from scratch using HTML, CSS, and JavaScript, ensuring a custom and tailored solution.</p>
