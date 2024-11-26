@@ -762,7 +762,7 @@ img.image80 {
   box-shadow: unset;
 }
 /* Responsive Design */
-@media (max-width: 1310px) {
+@media (max-width: 1300px) {
   .project-details {
       margin: 0 1rem;
       margin-top: -100px;
