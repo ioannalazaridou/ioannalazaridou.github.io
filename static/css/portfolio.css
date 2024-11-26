@@ -42,7 +42,7 @@ body {
 }
 
 p{
-    font-size:14px;
+    font-size:16px;
     font-weight: 500;
 }
 .container {
@@ -583,7 +583,7 @@ a.nav-link:focus ~ .nav-links{
 
 /* Project Details */
 .project-details {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: -100px auto 0;
   background: var(--darker-color);
   padding: 2rem;
