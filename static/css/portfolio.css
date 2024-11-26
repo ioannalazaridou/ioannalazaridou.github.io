@@ -702,6 +702,7 @@ p.quote {
   font-size: 2rem;
   margin-bottom: 2rem;
   color: var(--accent-color);
+  text-align: center;
 }
 
 .content-section p {
