@@ -584,7 +584,7 @@ a.nav-link:focus ~ .nav-links{
 
 /* Project Details */
 .project-details {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: -100px auto 0;
   background: var(--darker-color);
   padding: 2rem;
