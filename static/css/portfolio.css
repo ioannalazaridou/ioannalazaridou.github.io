@@ -188,6 +188,7 @@ nav {
   inset: 0;
   background: linear-gradient(to right, #4C3460, var(--dark-color), var(--dark-color));
   transition: transform 0.3s ease-out;
+  min-height: 100vh;
 }
 .particles {
   position: absolute;
