@@ -636,7 +636,7 @@ div.project-card:hover {
 .dynamic-words {
   position: relative;
   display: inline-block;
-  width: 170px;
+  width: 165px;
   height: 1.4em;
   overflow: hidden;
   vertical-align: bottom;
@@ -803,7 +803,7 @@ a.nav-link:focus ~ .nav-links{
 
 /* Project Details */
 .project-details {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: -100px auto 0;
   background: var(--darker-color);
   padding: 2rem;
