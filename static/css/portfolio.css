@@ -68,6 +68,7 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     background: var(--dark-color);
+    overflow-x: hidden;
 }
 
 p{
@@ -814,6 +815,12 @@ a.nav-link:focus ~ .nav-links{
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
+.project-details p {
+  font-size:1.1rem;
+}
+.detail-item p {
+  font-size:14px;
+}
 .details-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -951,7 +958,7 @@ p.quote {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin: 2rem 0;
+  /* margin: 2rem 0; */
 }
 
 .image-grid img {
