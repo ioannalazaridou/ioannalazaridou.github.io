@@ -1155,6 +1155,8 @@ align-self: center;
                   display: flex;
                   border-bottom: 2px solid var(--dark-color);
                   margin-bottom: 2rem;
+                  justify-content: center;
+
               }
       
               .tab-btn {
