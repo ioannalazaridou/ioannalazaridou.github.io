@@ -1029,7 +1029,7 @@ a.nav-link:focus ~ .nav-links{
   margin-top: 1.5rem;
 }
 
-.point-item h3 {
+.point-item h3, .recommendations h3 {
   margin-top: 0rem;
 }
 
