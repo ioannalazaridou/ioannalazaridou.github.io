@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4L8B7JL0S4"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+      
+          gtag('config', 'G-4L8B7JL0S4');
+        </script>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+          <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+          <!-- <link rel="icon" href="images/maics.png"> -->
+          <link href="../../static/css/portfolio.css" rel="stylesheet">
+          <link rel="icon" href="../../static/images/JL.png">
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+          <title>eVA - Vehicle Appraisal Platform</title>
+    <style>
+        :root {
+            --accent-color: #099FCB;
+        }
+
+        body {
+            background: var(--light-color);
+        }
+        .nav-links{
+            justify-content: flex-end;
+        }
+        .nav-links2{
+            justify-content: center;
+        }  
+        .design-comparison {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            gap: 20px;
+        }
+    
+        .design-column {
+            flex: 1;
+            text-align: center;
+        }
+    
+        .design-column img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .metric-trend {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .positive {
+            color: #28a745;
+        }
+        
+        .negative {
+            color: var(--accent-color);
+        }
+        
+        .trend-arrow {
+            font-size: 1.2rem;
+        }
+    
+    
+        @media (max-width: 768px) {
+            .design-comparison {
+                flex-direction: column;
+            }
+    
+            .design-column {
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+        }
+       
+    </style>  
+</head>
+    <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">︿</button>
+        <nav id="navbar">
+          <input type="checkbox" id="nav" class="hidden">
+          <label for="nav" class="nav-btn">
+            <i></i>
+            <i></i>
+            <i></i>
+          </label>
+          <div class="image-header">
+            <a href="/"><img class="logo" src="../../static/images/JL.png" alt="Logo"/></a>
+    
+            </div>
+          <div class="nav-links">
+            <a class="nav-link" id="navlink1" href="/#projects"><i class="fa-solid fa-arrow-left"></i> Back to All Projects</a>
+          </div>
+        </nav>
+    <section class="case-study-hero" style="background-image: url('../../static/images/eva/eva-cover.png')">
+        <div class="hero-content">
+            <h1 style="text-shadow: 2px 2px 15px var(--dark-color);">eVA Vehicle Appraisal</h1>
+        </div>
+    </section>
+
+    <section class="project-details">
+        <p>The eVA app is a comprehensive vehicle valuation and appraisal platform designed to enhance the vehicle transaction experience for retailers, original equipment manufacturers (OEMs), and fleets. It facilitates accurate vehicle valuations, streamlines part-exchange processes, and offers flexible options for vehicle disposal, including direct purchase or auctioning. The app supports various account levels, allowing dealerships to assign roles such as sales managers, appraisers, and auction coordinators, each with tailored access and functionalities.</p>
+        
+        <div class="details-grid">
+            <div class="detail-item">
+                <h3>Aim</h3>
+                <p>Redesign the eVA Web App</p>
+            </div>
+            <div class="detail-item">
+                <h3>Duration</h3>
+                <p>12 months</p>
+            </div>
+            <div class="detail-item">
+                <h3>Client</h3>
+                <p>Cox Automotive – Enterprise</p>
+            </div>
+            <div class="detail-item">
+                <h3>Role</h3>
+                <p>UX Designer</p>
+            </div>
+            <div class="detail-item">
+                <h3>Tools</h3>
+                <p>Mural, Hotjar, Dovetail, Userlytics, Figma</p>
+            </div>
+           
+        </div>
+    </section>
+    <section class="content-section2 lighter" style="display: flex; flex-direction: column; align-items: center;">
+        <h3>Redesigned Product</h3>
+       <img src="../../static/images/eva/new-product.png" alt="Final Prototypes" class="prototype-image" style="box-shadow:unset; width:100%;">
+       <h3>Original Product</h3>
+       <img src="../../static/images/eva/old-product.png" alt="Final Prototypes" class="prototype-image" style="box-shadow:unset; width:100%;">
+        </section>
+    <section class="timeline">
+        <div class="timeline-item"><a href="#usersection">
+            <h5>Discovery Phase</h5>
+        </a></div>
+        <div class="timeline-item"><a href="#informationsection">
+            <h5>User Understanding</h5>
+        </a></div>
+        <div class="timeline-item"><a href="#designsection">
+            <h5>Design Ideation</h5>
+        </a></div>
+        <div class="timeline-item"><a href="#testingsection">
+            <h5>User Testing</h5>
+        </a></div>
+        <div class="timeline-item"><a href="#prototypingsection">
+            <h5>Final Product</h5>
+        </a></div>
+    </section>
+
+
+    <section class="content-section" id="usersection">
+        <h2>Discovery Phase</h2>
+        <section class="content-section2 darker">
+            <div class="methodology-grid">
+            <div class="content-section2">
+                <h3>The Problem</h3>
+                <p>As a UX Designer, working closely with Product Managers, I set out to deeply understand the vehicle appraisal process used by dealers and contribute to shaping the digital strategy for eVA. Our goal was to identify how the existing platform supports users, uncover their pain points, and determine what they need from a digital inspection tool moving forward.</p>
+            </div>
+            <section class="content-section2 lighter">
+                <h3>Research Goals</h3>
+                <p>
+                    <ul>
+                        <li>Understand the current vehicle appraisal workflow</li>
+                        <li>Identify pain points in the existing platform</li>
+                        <li>Define user needs for a digital inspection tool</li>
+                        <li>Map the competitive landscape</li>
+                    </ul>
+                </p>
+            </section>
+        </div>
+        </section>
+        <p>To ensure a user-centred redesign, I conducted a comprehensive research process, combining internal assessments, behavioural analytics, user feedback, field observations, competitor analysis, and usability testing. From this combination, we identified the following key findings:</p>
+
+        <section class="content-section2 lighter">
+            <div class="findings-grid">
+                <div class="finding-card">
+                    <div class="finding-header">
+                        <div class="finding-icon">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+                        <h4>Navigation & Interface Issues</h4>
+                    </div>
+                    <ul>
+                        <li>Critical actions hidden in hamburger menu, reducing discoverability</li>
+                        <li>Lack of progress indicators and confusing back button behavior led to user disorientation</li>
+                        <li>Accessibility issues (contrast violations in key elements) failed to meet WCAG standards, hindering usability for visually impaired users</li>
+                    </ul>
+                </div>
+                
+                <div class="finding-card">
+                    <div class="finding-header">
+                        <div class="finding-icon">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <h4>Operational Workflow Inefficiencies</h4>
+                    </div>
+                    <ul>
+                        <li>Vehicle inspection sequence did not align with real-world practices, disrupting the appraisal process</li>
+                        <li>No option to save progress, requiring users to complete appraisals in one sitting</li>
+                        <li>Complex system integration and manual data entry contributed to slow workflows and errors</li>
+                    </ul>
+                </div>
+                
+                <div class="finding-card">
+                    <div class="finding-header">
+                        <div class="finding-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h4>Knowledge & Training Gaps</h4>
+                    </div>
+                    <ul>
+                        <li>System lacked embedded expertise and a common framework for appraisals</li>
+                        <li>Help text was hard to access, and jargon created barriers</li>
+                        <li>Steep learning curve for new users due to poor onboarding</li>
+                    </ul>
+                </div>
+                
+                <div class="finding-card">
+                    <div class="finding-header">
+                        <div class="finding-icon">
+                            <i class="fa-solid fa-cloud-sun"></i>
+                        </div>
+                        <h4>Environmental & Performance Challenges</h4>
+                    </div>
+                    <ul>
+                        <li>External factors (weather, lighting) impacted inspection quality</li>
+                        <li>System errors affected user efficiency and appraisal accuracy</li>
+                        <li>Performance issues in certain environments led to frustration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+                <p>These findings formed the foundation for the redesign strategy. Through this research, I aimed to inform key improvements and recommendations to streamline the process, enhance user satisfaction, and optimise the vehicle appraisal experience. By addressing these challenges, we sought to create a solution that not only improves efficiency but also better supports dealers and their businesses.</p>
+        <h2>Research Methodology</h2>
+        <p class="quote">How might we create a more intuitive and efficient vehicle appraisal platform that addresses dealers' pain points while improving the overall inspection experience?</p>
+          
+        <div class="image-grid">
+            <div class="columnflex">
+               <h3>Internal Evaluation: Heuristic & Accessibility Assessment</h3>
+               <p>The research began with an internal assessment that included a heuristic evaluation and an accessibility audit. This evaluation identified critical usability challenges within the vehicle appraisal process for dealers, particularly in poor visibility of system status, hidden basic actions, lack of progress indicators, and inefficient navigation. <br> Key issues included a confusing action sequence, multiple primary buttons causing ambiguity, and no safeguards against data loss. Additionally, accessibility audits revealed insufficient colour contrast and a misleading colour hierarchy, where the primary brand colour matched the success colour, making actions and feedback unclear.</p>
+               <!-- <img src="../../static/images/eva/heuristic-evaluation.png" alt="Results of the heuristic evaluation and accessibility audit" style="width:80%;"> -->
+
+               <section class="content-section2 lighter">
+                <div class="findings-grid">
+                    <div class="finding-card">
+                        <div class="finding-header">
+                            <div class="finding-icon">
+                                <i class="fa-solid fa-gauge-high"></i>
+                            </div>
+                            <h4>Dashboard</h4>
+                        </div>
+                        <p class="criteria"><strong>Criteria:</strong> Visibility of system status, Recognition rather than recall</p>
+                        <ul>
+                            <li>Basic actions hidden in hamburger menu</li>
+                            <li>Lack of visibility into current environment/context</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="finding-card">
+                        <div class="finding-header">
+                            <div class="finding-icon">
+                                <i class="fa-solid fa-clipboard-list"></i>
+                            </div>
+                            <h4>Appraisal Forms</h4>
+                        </div>
+                        <p class="criteria"><strong>Criteria:</strong> Visibility of system status, User control and freedom, Consistency and standards, Error prevention</p>
+                        <ul>
+                            <li>No progress indication</li>
+                            <li>Missing appraisal type indication</li>
+                            <li>Unnecessary info button clicks</li>
+                            <li>No save draft feature</li>
+                            <li>No data loss warning</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="finding-card">
+                        <div class="finding-header">
+                            <div class="finding-icon">
+                                <i class="fa-solid fa-car"></i>
+                            </div>
+                            <h4>Exterior Condition</h4>
+                        </div>
+                        <p class="criteria"><strong>Criteria:</strong> Match between system and real world, Consistency and standards</p>
+                        <ul>
+                            <li>Action sequence doesn't match real world</li>
+                            <li>Multiple primary buttons causing confusion</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="finding-card">
+                        <div class="finding-header">
+                            <div class="finding-icon">
+                                <i class="fa-solid fa-check-circle"></i>
+                            </div>
+                            <h4>Confirmation Screen</h4>
+                        </div>
+                        <p class="criteria"><strong>Criteria:</strong> User control and freedom, Aesthetic and minimalist design</p>
+                        <ul>
+                            <li>Inefficient section editing process</li>
+                            <li>Misleading editable appearance</li>
+                            <li>Visual clutter from all information</li>
+                        </ul>
+                    </div>
+            
+                    <div class="finding-card">
+                        <div class="finding-header">
+                            <div class="finding-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <h4>Search & Navigation</h4>
+                        </div>
+                        <p class="criteria"><strong>Criteria:</strong> Recognition rather than recall, Error prevention, Flexibility and efficiency of use</p>
+                        <ul>
+                            <li>Missing appraisal type in search results</li>
+                            <li>No sale cancellation confirmation</li>
+                            <li>Back button doesn't return to last screen</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+        </div>
+        <div class="image-grid">
+            <div class="columnflex">
+               <h3>Behavioural Analysis: Hotjar Insights & Surveys</h3>
+               <p>To gain quantitative and qualitative insights, I leveraged Hotjar to track user interactions with the app. This analysis helped uncover usability patterns, friction points, and areas of confusion.</p>
+               <img src="../../static/images/eva/hotjar.png" alt="Hotjar screenshots showing user behavior" style="width:80%;">
+                <p>
+                    Additionally, I conducted in-app surveys to measure user satisfaction and Net Promoter Score (NPS). The results revealed an NPS score of -26, indicating significant user dissatisfaction and a clear need for a substantial redesign to address these concerns.
+                </p>
+               <img src="../../static/images/eva/surveys.png" alt="Survey results showing user satisfaction" style="width:50%;">
+            </div>
+        </div>
+        <div class="image-grid">
+            <div class="columnflex">
+               <h3>External Research: Workshops & Stakeholder Interviews</h3>
+               <div class="final-container2">
+               <p>To further explore user needs, I conducted research workshops that included small-scale observational studies with inspectors at auction centres and dealerships to understand how they interact with the app in real-world settings. <br> <br>  I also conducted remote interviews with key stakeholders, including product managers, customer support teams, and sales representatives, to align the redesign with business objectives, priorities, and the long-term vision for the product.</p>
+               <img src="../../static/images/eva/dealervisit.jpg" alt="Photos from dealership visits and observations">
+            </div> 
+                
+            <p>Following this research, I first organised the data into an affinity map to identify relationships and group similar insights. Then, I coded recurring patterns across user behaviours, pain points, and business priorities.</p>
+                
+                <img src="../../static/images/eva/affinitymap.png" alt="Photo of affinity map" style="width:80%;"><br>
+                <img src="../../static/images/eva/codes.png" alt="Photo of codes" style="width:80%;">
+                
+                <p> This process revealed the following insights:</p>
+                <img src="../../static/images/eva/tableofthemes.png" alt="Thematic Analysis Results" style="width:80%;">
+            </div>
+        </div>
+        <div class="image-grid">
+            <div class="columnflex">
+               <h3>Competitive Analysis</h3>
+               <p>In parallel, I performed a competitor analysis to benchmark market positioning and industry standards. This helped assess how competitors handle similar challenges and provided inspiration for potential improvements in usability, features, and design patterns.</p>
+               <img src="../../static/images/eva/competitors.png" alt="Competitive analysis table" style="width:40%;">
+            </div>
+        </div>
+        <div class="image-grid">
+            <div class="columnflex">
+               <h3>Usability Testing: Evaluating the Redesign</h3>
+               <p>Finally, I conducted usability testing using Userlytics with five participants - dealers who had never used our app before. The objective was to assess how easily they could complete fundamental tasks and identify usability friction points.</p>
+               <img src="../../static/images/eva/remote-interviews.png" alt="Screenshots from remote usability testing sessions" style="width:80%;">
+                <p>
+                    Participants were asked to complete one overarching scenario with specific tasks, including initiating valuations, searching for vehicle information, and accessing previous appraisals. Throughout the test, participants provided real-time feedback, highlighting confusion points, usability issues, and potential improvements.
+                <br><br>
+                Our usability testing revealed several key areas for improvement that were affecting the user experience. These findings guided our redesign priorities and helped us address the most significant user challenges.
+                </p>
+                
+               <!-- <img src="../../static/images/eva/usability-findings.png" alt="Key usability findings from testing" style="width:50%;"> -->
+               <section class="content-section"> 
+                <div class="findings-grid">
+                    <div class="finding-card">
+                        <div class="finding-header">
+                            <div class="finding-icon" style="background-color: #b85ad4;">
+                                <i class="fa-solid fa-language"></i>
+                            </div>
+                            <h4>Language Clarity</h4>
+                        </div>
+                        <p>Unclear labels and use of industry jargon without clear explanations led to participant confusion. Users struggled to understand terminology specific to vehicle appraisals, creating barriers to completing basic tasks.</p>
+                    </div>
+                    
+                    <div class="finding-card">
+                        <div class="finding-header">
+                            <div class="finding-icon" style="background-color: #3cb798;">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+                            <h4>Visual Design and Affordance</h4>
+                        </div>
+                        <p>Poor use of design patterns, such as the search bar not meeting user expectations (looks like Google search but limited), using call-to-action buttons (checkboxes) for non-interactive elements, and misusing the hamburger menu to present actions rather than navigation options.</p>
+                    </div>
+                    
+                    <div class="finding-card">
+                        <div class="finding-header">
+                            <div class="finding-icon" style="background-color: #ee7746;">
+                                <i class="fa-solid fa-sitemap"></i>
+                            </div>
+                            <h4>Information Architecture</h4>
+                        </div>
+                        <p>Users are unable to understand where they are in the journey. Critical actions are hidden within menus, hindering user scannability and creating an information scent problem. Users struggle to find necessary information due to an unbalanced placement of key actions, where some (like search) are prominently displayed while others (like starting a valuation) are less accessible.</p>
+                    </div>
+                </div>
+                <p>Addressing these critical pain points became central to our redesign strategy, forming the foundation for significant improvements in the user experience.</p>
+            </section>
+            </div>
+        </div>
+    </section>
+    <section class="content-section" id="informationsection">
+        <h2>User Understanding and Journey</h2>
+       <div class="image-grid">
+           <div class="columnflex">
+            <h3>Personas</h3>
+            <p>Based on the research insights, I created detailed personas representing key user groups who engage with the eVA platform. These personas helped us better understand the needs, goals, frustrations, and behaviors of the users, guiding the design process to address their specific pain points.
+            </p>
+            <img src="../../static/images/eva/personas.png" alt="User Personas for the eVA platform" style="width:60%;">
+            
+            <h3>Empathy Map</h3>
+            <p>To dive deeper into understanding the users' motivations and emotional responses, we turned to the Empathy Map. This allowed us to visualise and synthesise what we learned about our users in a more human-centred way.
+            </p>
+            <img src="../../static/images/eva/empathy-map.png" alt="Empathy Map showing user feelings and thoughts" style="width:60%;">
+            
+            <h3>User Journey</h3>
+            <p>The user journey map was a critical tool to visualise how users interact with the app at each step of the process. From initiating a valuation to finalising the transaction, the journey highlighted pain points, including confusing navigation paths and lack of progress indicators.
+            </p>
+            <img src="../../static/images/eva/journey-map.png" alt="User Journey Map" style="width:100%;">
+            
+            <p>We held a collaborative brainstorming session to identify key opportunities for enhancing the user experience. This session allowed us to pinpoint pain points, uncover unmet needs, and explore innovative solutions to streamline the appraisal process.</p>
+            <img src="../../static/images/eva/brainstorming.png" alt="Brainstorming session photos" style="width:100%;">
+        </div>
+        </div>
+    </section>
+    <section class="content-section" id="designsection">
+        <h2>Design Ideation</h2>
+        <div class="image-grid">
+        <div class="columnflex">
+        <h3>Design System</h3>
+        <p>To ensure consistency and scalability, I developed a design system that defined the core UI components, including buttons, typography, colour schemes, and iconography. A key part of this process was refining the colour palette to ensure better accessibility and visual clarity. I introduced clear colour tokens to guarantee adequate colour contrast across the interface, which helped enhance readability and reduce visual strain. I also made sure to differentiate between feedback colours (and primary colours to avoid confusion and ensure that each type of message was immediately recognizable. This design system provided a solid foundation for further iterations and enhancements as the product evolved.</p>
+         <img src="../../static/images/eva/design-system.png" alt="Design system showing UI components" style="width:50%;">
+
+         <p>I designed high-fidelity prototypes using Figma. The prototype incorporated interactive elements, allowing stakeholders and test users to simulate the vehicle appraisal process. This version of the app provided a more accurate representation of the final product, making it easier to validate the design direction before development.</p>
+    </div>
+     </div>
+    </section>
+
+    <section class="content-section" id="testingsection">
+        <h2>User Testing</h2>
+        <div class="image-grid">
+            <div class="columnflex">
+             <p>To evaluate the effectiveness of the redesign, I conducted a second round of usability testing with real users. The first round was the baseline testing with the original design (5 users) while the second round was a validation testing with the new design (5 users). This allowed us to compare task completion rates, identify specific usability improvements, gather qualitative feedback on the changes and validate our design decisions.</p>
+             <!-- <img src="../../static/images/eva/testing-results.png" alt="User testing analysis" style="width:80%;" class="prototype-image"> -->
+             <div class="findings-grid">
+             <div class="metric-trend positive">
+                <span class="trend-arrow">↑</span>
+                <span class="trend-value">45%</span>
+                <p style="color: var(--text-color)">Task completion rate</p>
+            </div>
+            <div class="metric-trend negative">
+                <span class="trend-arrow">↓</span>
+                <span class="trend-value">35%</span>
+                <p style="color: var(--text-color)">Time on task</p>
+            </div>
+            <div class="metric-trend negative">
+                <span class="trend-arrow">↓</span>
+                <span class="trend-value">60%</span>
+                <p style="color: var(--text-color)">Error Rate</p>
+            </div>
+            <div class="metric-trend positive">
+                <span class="trend-arrow">↑</span>
+                <span class="trend-value">45%</span>
+                <p style="color: var(--text-color)">User Satisfaction</p>
+            </div>
+        </div>
+            </section>
+        </div>
+        </div>
+
+        <!-- <section class="content-section" id="prototypingsection">
+        <h2>Final Product</h2>
+       <div class="image-grid">
+        <div class="columnflex">
+            <div class="image-grid">
+                <div class="columnflex">
+                    <div class="design-comparison">
+                        <div class="design-column">
+                            <h4>Landing Screen Before: Limited Functionality</h4>
+                            <img src="../../static/images/eva/old-dashboard.png" alt="Original Dashboard">
+                            <p>A basic search interface with minimal context or actionable information.</p>
+                        </div>
+                        <div class="design-column">
+                            <h4>Landing Screen After: Comprehensive Analytics Dashboard</h4>
+                            <img src="../../static/images/eva/redesign-dashboard.png" alt="Redesigned Dashboard">
+                            <p>A data-rich dashboard providing immediate, actionable insights.</p>
+                        </div>
+                    </div>
+                    <p>The redesigned dashboard transforms a simple search interface into a comprehensive tool that empowers users with immediate, actionable insights. By prioritising user needs and leveraging data visualisation techniques, we created an interface that not only solves functional challenges but also provides a more engaging and informative experience.</p>
+                </div>
+            </div>
+            
+                <div class="image-grid">
+                    <div class="columnflex">
+                        <div class="design-comparison">
+                            <div class="design-column">
+                                <h4>Navigation Menu Before: Cluttered and Confusing</h4>
+                                <img src="../../static/images/eva/old-menu.png" alt="Original Menu Design">
+                                <p>Complex menu structure with hidden actions and unclear navigation paths.</p>
+                            </div>
+                            <div class="design-column">
+                                <h4>Navigation Menu After: Streamlined and Intuitive</h4>
+                                <img src="../../static/images/eva/new-menu.png" alt="Redesigned Menu">
+                                <p>Clear, organised navigation with easily accessible key actions.<br>
+                                    • Simplified menu structure and jargon<br>
+                                    • Prioritised most important actions<br>
+                                    • Improved visual hierarchy<br>
+                                    • More intuitive action placement<br>
+                                    • Streamlined access to key features<br>
+                                    • Reduced cognitive load<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-grid">
+                    <div class="columnflex">
+                        <div class="design-comparison">
+                            <div class="design-column">
+                                <h4>Past Valuations Before: A confusing, cluttered screen</h4>
+                                <img src="../../static/images/eva/old-search.png" alt="Original Past Valuation Screen">
+                                <p>A less structured, more cluttered layout with limited information visibility. Not clear hierarchy of actions and differentiation between entries.</p>
+                               
+                            </div>
+                            <div class="design-column">
+                                <h4>Past Valuations After: An intuitive, information-rich screen</h4>
+                                <img src="../../static/images/eva/new-search.png" alt="Redesigned Past Valuations Screen">
+                                <p>Clear, organised navigation with easily accessible key actions.<br>
+                                    • Introduced a clear, tabular layout that provides detailed information at a glance <br>
+                                    • Added vehicle thumbnail images for quick visual identification<br>
+                                    • Implemented consistent colour coding for condition<br>
+                                    • Enabled users to quickly narrow down and find specific valuations<br>
+                                    • Simplified action menus with clear, intuitive icons<br>
+                                    • Consistent action buttons across entries and reduced cognitive load by organising actions logically<br>
+                                </p>
+                               
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="image-grid">
+                    <div class="columnflex">
+                        <div class="design-comparison">
+                            <div class="design-column">
+                                <h4>Valuations Details Before: Lacks visual hierarchy, and creates cognitive strain</h4>
+                                <img src="../../static/images/eva/old-valuationdetails.png" alt="Original Past Valuation Screen">
+                                <p>Accessing valuation details requires a screen redirect. <br>
+                                    • A cluttered layout that makes it hard to extract key information quickly<br>
+                                    • The lack of visual hierarchy blends important details together <br>
+                                    • Poor colour contrast and typography add cognitive strain, especially when navigating complex data<br>
+                                    • The rigid interface lacks intuitive guidance, disconnecting from real-world workflows<br>
+                                    • Form inputs appear as checkboxes, misleading users into thinking they are interactive, and excessive use of green for non-interactive elements further reduces readability.</p>
+                              
+                            </div>
+                            <div class="design-column">
+                                <h4>Valuations Details After: Clean, structured, and user-friendly</h4>
+                                <img src="../../static/images/eva/new-valuationdetails.png" alt="Redesigned Past Valuations Screen">
+                                <p>Details appear in a side-modal, maintaining context, reducing cognitive load, and prioritising key information through progressive disclosure.<br> 
+                                    • A clear timeline, and well-grouped sections improve scanability and comprehension<br>
+                                    • Consistent colour coding, better typography, and thoughtful whitespace reduce cognitive load, making the interface more user-friendly<br> 
+                                    • Clear distinctions between past and current answers create a more engaging and efficient experience aligned with user thinking<br>
+                                </p>
+                               
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+        </div>
+    </div>
+</section> -->
+<section class="content-section" id="prototypingsection">
+    <h2>Final Product</h2>
+    <div class="image-grid">
+        <div class="columnflex">
+            <div class="design-comparison">
+                <div class="design-column">
+                    <h4>Dashboard: Before</h4>
+                    <img src="../../static/images/eva/old-dashboard.png" alt="Original Dashboard">
+                    <ul>
+                        <li>Basic search interface</li>
+                        <li>Minimal context</li>
+                        <li>No actionable insights</li>
+                    </ul>
+                </div>
+                <div class="design-column">
+                    <h4>Dashboard: After</h4>
+                    <img src="../../static/images/eva/redesign-dashboard.png" alt="Redesigned Dashboard">
+                    <ul>
+                        <li>Data-rich dashboard</li>
+                        <li>Immediate insights</li>
+                        <li>Empowering user experience</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="design-comparison">
+                <div class="design-column">
+                    <h4>Past Valuations: Before</h4>
+                    <img src="../../static/images/eva/old-search.png" alt="Original Past Valuation Screen">
+                    <ul>
+                        <li>Cluttered layout</li>
+                        <li>Limited information visibility</li>
+                        <li>No clear action paths</li>
+                    </ul>
+                </div>
+                <div class="design-column">
+                    <h4>Past Valuations: After</h4>
+                    <img src="../../static/images/eva/new-search.png" alt="Redesigned Past Valuations Screen">
+                    <ul>
+                        <li>Structured tabular design</li>
+                        <li>Vehicle thumbnails</li>
+                        <li>Easy filtering</li>
+                        <li>Logical action placement</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="design-comparison">
+                <div class="design-column">
+                    <h4>Valuation Details: Before</h4>
+                    <img src="../../static/images/eva/old-valuationdetails.png" alt="Original Valuation Details">
+                    <ul>
+                        <li>Poor visual hierarchy</li>
+                        <li>Confusing layout</li>
+                        <li>Misleading interactions (checkboxes that look clickable)</li>
+                    </ul>
+                </div>
+                <div class="design-column">
+                    <h4>Valuation Details: After</h4>
+                    <img src="../../static/images/eva/new-valuationdetails2.png" alt="Redesigned Valuation Details">
+                    <ul>
+                        <li>Side-modal design that maintains user context</li>
+                        <li>Progressive information disclosure</li>
+                        <li>Improved readability</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="design-comparison">
+                <div class="design-column">
+                    <h4>Appraisal Process: Before</h4>
+                    <img src="../../static/images/eva/appraisal-old.png" alt="Original Valuation Details">
+                    <ul>
+                        <li>Restrictive dropdown workflow limited damage reporting flexibility</li>
+                        <li>Unclear labels, binary choices, and no visuals made inspections confusing</li>
+                        <li>Didn't accommodate user expertise levels, frustrating all inspectors</li>
+                        <li>Inspection sequence misaligned with natural vehicle examination, causing inefficiency</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="design-comparison">
+                <div class="design-column">
+                    <h4>Appraisal Process: After</h4>
+                    <img src="../../static/images/eva/appraisal-new.png" alt="Original Valuation Details">
+                    <ul>
+                        <li>Dual modes (guided workflow for novices, quick diagrams for experts) suit all skill levels</li>
+                        <li>Allows users to report multiple damages</li>
+                        <li>Follows natural inspection flow, using clear visuals and progressive disclosure</li>
+                        <li>The visual approach reduces cognitive load and makes the inspection process more engaging</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="design-comparison">
+                <div class="design-column">
+                    <h4>Vehicle Summary: Before</h4>
+                    <img src="../../static/images/eva/summary-old.png" alt="Original Menu Design">
+                    <ul>
+                        <li>Dense, unfiltered content causes cognitive fatigue</li>
+                        <li>Poor Scannability, long lists with minimal hierarchy make it hard to find relevant details quickly</li>
+                        <li>No filtering forces users to scroll through details</li>
+                        <li>Relying only on text makes it harder to understand the vehicle's condition</li>
+                    </ul>
+                </div>
+                <div class="design-column">
+                    <h4>Vehicle Summary: After</h4>
+                    <img src="../../static/images/eva/summary-new.png" alt="Redesigned Menu">
+                    <ul>
+                        <li>Option to only see questions where the user’s answer differs from the default, reducing cognitive load</li>
+                        <li>Better spacing, alignment, and organization make scanning easier</li>
+                        <li>Car diagram with marked damage provides an intuitive and quick way to assess condition</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="design-comparison">
+                <div class="design-column">
+                    <h4>Navigation Menu: Before</h4>
+                    <img src="../../static/images/eva/old-menu.png" alt="Original Menu Design">
+                    <ul>
+                        <li>Complex structure</li>
+                        <li>Hidden actions</li>
+                        <li>Unclear navigation</li>
+                    </ul>
+                </div>
+                <div class="design-column">
+                    <h4>Navigation Menu: After</h4>
+                    <img src="../../static/images/eva/new-menu.png" alt="Redesigned Menu">
+                    <ul>
+                        <li>Simplified menu</li>
+                        <li>Clear action hierarchy</li>
+                        <li>Reduced cognitive load</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- <section class="content-section2 darker">
+        <h2>Results & Impact</h2>
+        <div class="methodology-grid">
+            <div class="content-section2">
+                <h3>Quantitative Improvements</h3>
+                <ul>
+                    <li>NPS score improved from -26 to +35</li>
+                    <li>45% reduction in inspection time</li>
+                    <li>60% decrease in support tickets</li>
+                    <li>80% increase in mobile usage</li>
+                </ul>
+            </div>
+            <section class="content-section2 lighter">
+                <h3>Qualitative Feedback</h3>
+                <p class="quote">"The new system is much more intuitive"</p>
+                <p class="quote">"I can complete inspections in half the time"</p>
+            </section>
+        </div>
+    </section> -->
+    <div class="nav-links2" style="width:100%">
+        <a class="nav-link2" id="navlink1" href="/Projects/previous"><i class="fa-solid fa-arrow-left"></i> Previous Project</a>
+        <a class="nav-link2" id="navlink2" href="/Projects/Self-Appraisal">Next Project <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    <section id="contact" class="contact lighter">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+                <p class="fade-in" style="margin-bottom:2rem;">Let's have a talk so you can learn more about my work!</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <a href="mailto:ioanna.lazaridou@gmail.com">
+                        <i class="fas fa-envelope"></i><br>ioanna.lazaridou5@gmail.com
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <a href="https://www.linkedin.com/in/ioanna-lazaridou/" target="_blank">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i><br>Ioanna Lazaridou
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <a href="tel:+123456789">
+                        <i class="fas fa-phone"></i><br>+30 6987171903<br>+44 7818260729
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footnote"><p>©  Copyright&nbsp;<span id="demo"></span> &nbsp;Ioanna Lazaridou | All rights reserved.</p></div>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile navigation toggle
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+
+        if (mobileNavToggle && mobileNav) {
+            mobileNavToggle.addEventListener('click', () => {
+                mobileNav.classList.toggle('d-none');
+            });
+        }
+    </script>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+    
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+    
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+    
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+        <script>
+      function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+    
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+    
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+    
+    window.addEventListener("scroll", reveal);
+    </script>
+    <script>
+        const d = new Date();
+        let year = d.getFullYear();
+        document.getElementById("demo").innerHTML = year;
+    </script>
+</body>
+</html>
