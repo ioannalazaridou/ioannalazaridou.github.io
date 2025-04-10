@@ -7,6 +7,7 @@
     --light-color: #27282E;
     /* --accent-color: #cbf175; */
     --accent-color: #A464D8;
+    --accent-color-darker: #834fae;
     --accent-color-lighter: #a464d82a;
     /* --accent-color: #40e0d0; */
     --text-color: #e3e7fa;
@@ -26,6 +27,7 @@
   --medium-color: #f1f1f1;
   --light-color: #fff;
   --accent-color: #A464D8;
+  --accent-color-darker: #834fae;
   --text-color: #5C5C5C;
   --text-color-light: #333;
   --text-color-muted: #252633;
@@ -437,7 +439,30 @@ nav {
     margin-bottom: 2rem;
     color: var(--text-color-muted);
 }
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  margin-top:1.5rem;
+}
 
+.cta-button:hover {
+  background-color: var(--accent-color-darker);
+  color:white;
+}
+
+.arrow-icon {
+  margin-left: 0.5rem;
+}
 /* About Section */
 .about {
     padding: 8rem 0;
@@ -1723,3 +1748,4 @@ img.content-y, .final-container img {
       left: -6px !important;
   }
 }
+
