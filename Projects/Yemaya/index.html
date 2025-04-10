@@ -21,7 +21,7 @@
           <title>Yamaya</title>
     <style>
         :root {
-            --accent-color: #FF66FF;
+            --accent-color: #FF66FF!important;
         }
 
         body {
@@ -32,6 +32,9 @@
         }
         .nav-links2{
             justify-content: center;
+        }
+        .invertimg {
+            filter:var(--invertimg);
         }
     </style>  
 </head>
@@ -50,6 +53,17 @@
             </div>
           <div class="nav-links">
             <a class="nav-link" id="navlink1" href="/#projects"><i class="fa-solid fa-arrow-left"></i> Back to All Projects</a>
+            <div class="theme-toggle-container">
+                <button class="theme-toggle" aria-label="Toggle theme mode">
+                  <span class="toggle-option sun">
+                    <i class="toggle-icon fas fa-sun"></i>
+                  </span>
+                  <span class="toggle-option moon">
+                    <i class="toggle-icon fas fa-moon"></i>
+                  </span>
+                  <span class="toggle-slider"></span>
+                </button>
+              </div>
           </div>
         </nav>
     <section class="case-study-hero" style="background-image: url('../../static/images/yemcover.png')">
@@ -174,7 +188,7 @@
             <section class="content-section2 lighter">
             <h3> Insights</h3>
             <p>Based on the insights and with a strong grasp of the information-seeking problems of users, we specified users’ core interactions</p>
-            <img src="../../static/images/yemaya/interactions.png" alt="User Needs table" style="width:100%;">
+            <img src="../../static/images/yemaya/interactions.png" alt="User Needs table" style="width:100%;" class="invertimg">
             <p>Through this, the system requirements were outlined as follows:<br>
                 • Integrate with messaging channels for information exchange;<br>
                 • Generate reliable responses by using a trusted pregnancy source database;<br>
@@ -371,6 +385,7 @@
         let year = d.getFullYear();
         document.getElementById("demo").innerHTML = year;
         </script>
+        <script src="../../script/theme-script.js"></script>
       </body>
 </body>
 </html>

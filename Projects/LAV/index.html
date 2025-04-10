@@ -21,7 +21,7 @@
           <title>LAV</title>
     <style>
         :root {
-            --accent-color: #f69b3b;
+            --accent-color: #f69b3b!important;
         }
 
         body {
@@ -51,6 +51,17 @@
             </div>
           <div class="nav-links">
             <a class="nav-link" id="navlink1" href="/#projects"><i class="fa-solid fa-arrow-left"></i> Back to All Projects</a>
+            <div class="theme-toggle-container">
+                <button class="theme-toggle" aria-label="Toggle theme mode">
+                  <span class="toggle-option sun">
+                    <i class="toggle-icon fas fa-sun"></i>
+                  </span>
+                  <span class="toggle-option moon">
+                    <i class="toggle-icon fas fa-moon"></i>
+                  </span>
+                  <span class="toggle-slider"></span>
+                </button>
+              </div>
           </div>
         </nav>
     <section class="case-study-hero" style="background-image: url('../../static/images/lavcoverr.png')">
@@ -388,6 +399,7 @@
         let year = d.getFullYear();
         document.getElementById("demo").innerHTML = year;
         </script>
+        <script src="../../script/theme-script.js"></script>
       </body>
 </body>
 </html>

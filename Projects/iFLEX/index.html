@@ -21,7 +21,7 @@
           <title>iFLEX</title>
     <style>
         :root {
-            --accent-color: #35AEFF;
+            --accent-color: #35AEFF!important;
         }
 
         body {
@@ -51,6 +51,17 @@
             </div>
           <div class="nav-links">
             <a class="nav-link" id="navlink1" href="/#projects"><i class="fa-solid fa-arrow-left"></i> Back to All Projects</a>
+            <div class="theme-toggle-container">
+                <button class="theme-toggle" aria-label="Toggle theme mode">
+                  <span class="toggle-option sun">
+                    <i class="toggle-icon fas fa-sun"></i>
+                  </span>
+                  <span class="toggle-option moon">
+                    <i class="toggle-icon fas fa-moon"></i>
+                  </span>
+                  <span class="toggle-slider"></span>
+                </button>
+              </div>
           </div>
         </nav>
     <section class="case-study-hero" style="background-image: url('../../static/images/iFLEX/iFLEXCOVER.png')">
@@ -182,7 +193,7 @@
             <section class="content-section2 lighter">
             <h3> Insights</h3>
             <p>Through analysis of the usability testing results, I identified tasks with low success rates, efficiency issues, and critical errors. This process enabled me to pinpoint potential design issues and propose necessary redesigns.</p>
-            <img src="../../static/images/iFLEX/11.png" alt="Usability Testing Results"> 
+            <img src="../../static/images/iFLEX/11.png" alt="Usability Testing Results" style="filter:var(--invertimg);"> 
             </section>
         </div>
         </div>
@@ -215,13 +226,13 @@
                         <h3>Welcoming and Landing Screen</h3>
                         <p>Start your journey with iFLEX, your personal energy assistant, designed with a sleek dark theme for a premium, eye-friendly experience.
                             <br><br>
-                            <b style="color:white;">Track Your Energy Smartly</b><br>Want to stay on top of your energy use? Easily monitor consumption, assets, and get personalised DR event alerts—all from one dashboard.
+                            <b style="color:var(--paper-invert);">Track Your Energy Smartly</b><br>Want to stay on top of your energy use? Easily monitor consumption, assets, and get personalised DR event alerts—all from one dashboard.
                             <br><br>
-                            <b style="color:white;">Navigation Made Simple</b><br>Need quick access? The menu, notifications, and your profile are always just a tap away.
+                            <b style="color:var(--paper-invert);">Navigation Made Simple</b><br>Need quick access? The menu, notifications, and your profile are always just a tap away.
                             <br><br>
-                            <b style="color:white;">Visualise Your Data</b><br>Curious about trends? See your energy patterns with colour-coded charts and easy-to-read insights for a clearer view of your consumption.
+                            <b style="color:var(--paper-invert);">Visualise Your Data</b><br>Curious about trends? See your energy patterns with colour-coded charts and easy-to-read insights for a clearer view of your consumption.
                             <br><br>
-                            <b style="color:white;">Effortless Calendar</b><br>Navigate energy events with a simple calendar, featuring clear markers and smooth month-to-month scrolling.</p>
+                            <b style="color:var(--paper-invert);">Effortless Calendar</b><br>Navigate energy events with a simple calendar, featuring clear markers and smooth month-to-month scrolling.</p>
                     </div>
                 </div>
                 <div class="final-container">
@@ -236,19 +247,19 @@
                     <div class ="content-y" style="align-content: center;">
                         <h3>DR Events and Advice</h3>
                         <p>
-                            <b style="color:white;">Want to join DR Events without the hassle?</b><br>Simply turn on Auto Mode, and let iFLEX take care of everything. It will automatically handle your participation in upcoming DR events based on your goals.
+                            <b style="color:var(--paper-invert);">Want to join DR Events without the hassle?</b><br>Simply turn on Auto Mode, and let iFLEX take care of everything. It will automatically handle your participation in upcoming DR events based on your goals.
                             <br><br>
-                            <b style="color:white;">Stay in the loop</b><br>Easily track past and upcoming DR events, whether you or iFLEX accepted them. And if your plans change, you can opt out of any upcoming event with just a tap.
+                            <b style="color:var(--paper-invert);">Stay in the loop</b><br>Easily track past and upcoming DR events, whether you or iFLEX accepted them. And if your plans change, you can opt out of any upcoming event with just a tap.
                             <br><br>
-                            <b style="color:white;">Maximise performance</b><br>iFLEX offers personalised advice on operating your assets more efficiently or suggesting replacements for high-consumption items. Get tailored tips to improve your energy performance and save more.</p>
+                            <b style="color:var(--paper-invert);">Maximise performance</b><br>iFLEX offers personalised advice on operating your assets more efficiently or suggesting replacements for high-consumption items. Get tailored tips to improve your energy performance and save more.</p>
                     </div>
                 </div>
                 <div class="final-container">
                     <div style="align-content: center;">
                         <h3>My Schedules</h3>
                         <p>You can view all your saved schedules in one place. To add a new one, simply click "Add New Schedule" and customise it for your assets and operations.<br><br>
-                            <b style="color:white;">Tailored to Your Needs</b><br>You can have multiple assets and set parameters (such as temperature ranges and timing). The iFA uses these settings to automatically manage your assets' operation, ensuring efficiency and grid flexibility without manual intervention.<br><br>
-                            <b style="color:white;">Stay Informed</b><br>If there's ever a conflict, you’ll be notified right away. You can also easily edit, delete, or activate/deactivate any saved schedule with just a few taps.
+                            <b style="color:var(--paper-invert);">Tailored to Your Needs</b><br>You can have multiple assets and set parameters (such as temperature ranges and timing). The iFA uses these settings to automatically manage your assets' operation, ensuring efficiency and grid flexibility without manual intervention.<br><br>
+                            <b style="color:var(--paper-invert);">Stay Informed</b><br>If there's ever a conflict, you’ll be notified right away. You can also easily edit, delete, or activate/deactivate any saved schedule with just a few taps.
                         </p>
                     </div>
                     <img src="../../static/images/iFLEX/fifth2.png" alt="Final Prototype Schedules Screens">
@@ -258,11 +269,11 @@
                 <div class ="content-y" style="align-content: center;">
                     <h3>Notifications</h3>
                     <p>
-                        <b style="color:white;">Stay Informed with Push Notifications</b><br>Get real-time updates from iFLEX directly on your mobile device. Whether it’s about new DR events or important alerts, you’ll always be in the know.
+                        <b style="color:var(--paper-invert);">Stay Informed with Push Notifications</b><br>Get real-time updates from iFLEX directly on your mobile device. Whether it’s about new DR events or important alerts, you’ll always be in the know.
                         <br><br>
-                        <b style="color:white;">Silence Rules</b><br>Want some quiet time? Set up silence rules to block notifications during specific times of the week.
+                        <b style="color:var(--paper-invert);">Silence Rules</b><br>Want some quiet time? Set up silence rules to block notifications during specific times of the week.
                         <br><br>
-                        <b style="color:white;">Need a Break?</b><br>Use Temporary Silence to mute all push notifications whenever you need a moment of uninterrupted focus.</p>
+                        <b style="color:var(--paper-invert);">Need a Break?</b><br>Use Temporary Silence to mute all push notifications whenever you need a moment of uninterrupted focus.</p>
                 </div>
             </div>
         </div>
@@ -405,6 +416,7 @@
         let year = d.getFullYear();
         document.getElementById("demo").innerHTML = year;
         </script>
+        <script src="../../script/theme-script.js"></script>
       </body>
 </body>
 </html>

@@ -77,15 +77,23 @@ body:not(.loaded) .content {
         <a href="/"><img class="logo" src="static/images/JL.png" alt="Logo"/></a>
 
         </div>
-        <!-- <button class="theme-toggle">
-            <i class="fas fa-moon"></i>
-        </button> -->
       <div class="nav-links">
       <a class="nav-link" id="navlink1" href="#welcome-section">Home</a>
       <a class="nav-link" id="navlink2" href="#about">About</a>
       <a class="nav-link" id="navlink3" href="#projects">Projects</a>
       <a class="nav-link" id="navlink4" href="#services">Services</a>
        <a class="nav-link" id="navlink5" href="#contact">Contact</a>
+       <div class="theme-toggle-container">
+        <button class="theme-toggle" aria-label="Toggle theme mode">
+          <span class="toggle-option sun">
+            <i class="toggle-icon fas fa-sun"></i>
+          </span>
+          <span class="toggle-option moon">
+            <i class="toggle-icon fas fa-moon"></i>
+          </span>
+          <span class="toggle-slider"></span>
+        </button>
+      </div>
       </div>
     </nav>
     
@@ -110,6 +118,9 @@ body:not(.loaded) .content {
                 </div>
                 <span class="dynamic-text">that champion user needs.</span>
             </div>
+        </div>
+        <div class="avatar-container fade-in">
+            <img src="static/images/avatar28.png" alt="Ioanna Lazaridou" class="avatar-img">
         </div>
         <div class="corner corner-tl"></div>
     <div class="corner corner-tr"></div>
@@ -138,7 +149,7 @@ body:not(.loaded) .content {
                     <img src="static/images/eva-cover.png" alt="Automotive Project 1 Cover" class="project-image">
                     <div class="project-info">
                         <h4>eVA Web App Redesign - Automotive B2B SaaS</h4>
-                        <p style="color:#099FCB">USER RESEARCH | UX/UI DESIGN | DESIGN SYSTEM | USER TESTING</p>
+                        <p style="color:#75c2d9">USER RESEARCH | UX/UI DESIGN | DESIGN SYSTEM | USER TESTING</p>
                     </div>
                 </a>
                 <a class="project-card" href="/Projects/self-appraisal">
@@ -433,8 +444,8 @@ body:not(.loaded) .content {
           
           // Update gradients
           document.querySelector('.gradient-bg').style.background = `
-            radial-gradient(circle at ${x}px ${y}px, purple, transparent 40%),
-            radial-gradient(circle at ${x - 200}px ${y - 200}px, blue, transparent 30%),
+            radial-gradient(circle at ${x}px ${y}px, var(--accent-color), transparent 40%),
+            radial-gradient(circle at ${x - 200}px ${y - 200}px, var(--accent-color), transparent 30%),
             radial-gradient(circle at ${x + 200}px ${y + 200}px, pink, transparent 35%)
           `;
     
@@ -526,5 +537,6 @@ body:not(.loaded) .content {
         
                 // Keep rest of your existing script
     </script>
+    <script src="script/theme-script.js"></script>
 </body>
 </html>

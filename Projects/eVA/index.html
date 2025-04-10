@@ -21,7 +21,7 @@
           <title>eVA - Vehicle Appraisal Platform</title>
     <style>
         :root {
-            --accent-color: #099FCB;
+            --accent-color: #75c2d9!important;
         }
 
         body {
@@ -33,7 +33,10 @@
         .nav-links2{
             justify-content: center;
         }  
-
+        .prototype-image, .image-grid img {
+            background:#099ecb17;
+            padding:0.15rem;
+        }
        
     </style>  
 </head>
@@ -52,6 +55,17 @@
             </div>
           <div class="nav-links">
             <a class="nav-link" id="navlink1" href="/#projects"><i class="fa-solid fa-arrow-left"></i> Back to All Projects</a>
+            <div class="theme-toggle-container">
+                <button class="theme-toggle" aria-label="Toggle theme mode">
+                  <span class="toggle-option sun">
+                    <i class="toggle-icon fas fa-sun"></i>
+                  </span>
+                  <span class="toggle-option moon">
+                    <i class="toggle-icon fas fa-moon"></i>
+                  </span>
+                  <span class="toggle-slider"></span>
+                </button>
+              </div>
           </div>
         </nav>
     <section class="case-study-hero" style="background-image: url('../../static/images/eva/eva-cover.png')">
@@ -321,7 +335,7 @@
         </div>
         <div class="image-grid">
             <div class="columnflex">
-               <h3>Usability Testing: Evaluating the Redesign</h3>
+               <h3>Usability Testing</h3>
                <p>Finally, I conducted usability testing using Userlytics with five participants - dealers who had never used our app before. The objective was to assess how easily they could complete fundamental tasks and identify usability friction points.</p>
                <img src="../../static/images/eva/remote-interviews.png" alt="Screenshots from remote usability testing sessions" style="width:80%;">
                 <p>
@@ -898,5 +912,6 @@
         let year = d.getFullYear();
         document.getElementById("demo").innerHTML = year;
     </script>
+    <script src="../../script/theme-script.js"></script>
 </body>
 </html>

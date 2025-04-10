@@ -21,7 +21,7 @@
           <title>Self-Appraisal</title>
     <style>
         :root {
-            --accent-color: #CDB9FD;
+            --accent-color: #CDB9FD!important;
         }
 
         body {
@@ -50,6 +50,17 @@
             </div>
           <div class="nav-links">
             <a class="nav-link" id="navlink1" href="/#projects"><i class="fa-solid fa-arrow-left"></i> Back to All Projects</a>
+            <div class="theme-toggle-container">
+                <button class="theme-toggle" aria-label="Toggle theme mode">
+                  <span class="toggle-option sun">
+                    <i class="toggle-icon fas fa-sun"></i>
+                  </span>
+                  <span class="toggle-option moon">
+                    <i class="toggle-icon fas fa-moon"></i>
+                  </span>
+                  <span class="toggle-slider"></span>
+                </button>
+              </div>
           </div>
         </nav>
     <section class="case-study-hero" style="background-image: url('../../static/images/self-appraisal/cover.png')">
@@ -418,9 +429,9 @@
                     <br>
                     The outline guides you where to stand and what to capture - just follow the highlights for perfect shots!
                     <br><br>
-                    <span style="color:white;">Spot damage?</span><br> Capture it right after the main shot.<br>
-                    <span style="color:white;">Multiple issues?</span><br> Snap them all in one go.<br>
-                    <span style="color:white;">No damage to report?</span><br> Simply tap 'I don't see any damage' and move on to the next section. Quick and easy!</p>
+                    <span style="color:var(--paper-invert);">Spot damage?</span><br> Capture it right after the main shot.<br>
+                    <span style="color:var(--paper-invert);">Multiple issues?</span><br> Snap them all in one go.<br>
+                    <span style="color:var(--paper-invert);">No damage to report?</span><br> Simply tap 'I don't see any damage' and move on to the next section. Quick and easy!</p>
             </div>
             <img src="../../static/images/self-appraisal/fifthh.png" alt="Final Prototype Overview and Damaged Photos">
         </div>
@@ -439,7 +450,7 @@
     </div>
     </section>
     <section class="content-section2 darker">
-        <p>The project shows how smart UX design can turn a usually complicated process into something easy and efficient. By focusing on what users need while also meeting business goals, we came up with a solution that works for both dealerships and car owners. It was a great reminder of how important user research, teamwork, and testing are in building solid digital experiences. <br><br> The app led to a <span style="color:white;"><b>50%</b></span> increase in leads and a <span style="color:white;"><b>40%</b></span> increase in new dealership contracts, as more dealerships wanted to adopt the product.</p>
+        <p>The project shows how smart UX design can turn a usually complicated process into something easy and efficient. By focusing on what users need while also meeting business goals, we came up with a solution that works for both dealerships and car owners. It was a great reminder of how important user research, teamwork, and testing are in building solid digital experiences. <br><br> The app led to a <span style="color:var(--paper-invert);"><b>50%</b></span> increase in leads and a <span style="color:var(--paper-invert);"><b>40%</b></span> increase in new dealership contracts, as more dealerships wanted to adopt the product.</p>
     </section>
     <div class="nav-links2" style="width:100%">
         <a class="nav-link2" id="navlink1" href="/Projects/eVA"><i class="fa-solid fa-arrow-left"></i> Previous Project</a>
@@ -594,6 +605,7 @@
         let year = d.getFullYear();
         document.getElementById("demo").innerHTML = year;
         </script>
+        <script src="../../script/theme-script.js"></script>
       </body>
 </body>
 </html>

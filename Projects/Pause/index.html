@@ -21,7 +21,7 @@
           <title>Pause</title>
     <style>
         :root {
-            --accent-color: #dfbda7;
+            --accent-color: #dfbda7!important;
         }
 
         body {
@@ -32,6 +32,13 @@
         }
         .nav-links2{
             justify-content: center;
+        }
+        .prototype-image {
+            background:#00000093;
+            padding:0.25rem;
+        }
+        .image-grid {
+            margin: 1.5rem 0;
         }
     </style>  
 </head>
@@ -50,6 +57,17 @@
             </div>
           <div class="nav-links">
             <a class="nav-link" id="navlink1" href="/#projects"><i class="fa-solid fa-arrow-left"></i> Back to All Projects</a>
+            <div class="theme-toggle-container">
+                <button class="theme-toggle" aria-label="Toggle theme mode">
+                  <span class="toggle-option sun">
+                    <i class="toggle-icon fas fa-sun"></i>
+                  </span>
+                  <span class="toggle-option moon">
+                    <i class="toggle-icon fas fa-moon"></i>
+                  </span>
+                  <span class="toggle-slider"></span>
+                </button>
+              </div>
           </div>
         </nav>
     <section class="case-study-hero" style="background-image: url('../../static/images/pausecoverr.png')">
@@ -165,7 +183,7 @@
         </div>
         <p>After considering the Persuasive System Design model, we iterated on our mid-fidelity wireframes and developed mid-to-high fidelity mockups. These grayscale mockups include all interactive elements and real content, providing an accurate representation of the final product. This approach allowed us to focus on layout and functionality without the distraction of colors, facilitating feedback on structure, content, and user flow before finalizing the visual design.</p>
         <div class="image-grid">
-            <div><h4 style="color:white;">Primary Task Support:</h4>
+            <div><h4 style="color:var(--paper-invert);">Primary Task Support:</h4>
                 <p> Self-monitoring:<br>
                 Users can log, update, and monitor activity, nutrition, and symptoms related to PM and LC, including severity and personal notes.<br><br>
                 
@@ -178,7 +196,7 @@
         </div>
         <div class="image-grid">
             <img src="../../static/images/pause/mockup2.png" alt="Dialogue Support Screens" class="blacknwhite">
-            <div><h4 style="color:white;">Dialogue Support</h4>
+            <div><h4 style="color:var(--paper-invert);">Dialogue Support</h4>
                 <p> Rewards:<br>
                     We used gamification techniques, inspired by Wheel of Sukr, to motivate healthier behaviors. Users earn points by completing tasks, following suggestions, sharing stories, and logging symptoms, which grow a virtual garden.<br><br>
                     
@@ -193,7 +211,7 @@
         </div>
         <div class="image-grid">
            
-            <div><h4 style="color:white;">Social Support:</h4>
+            <div><h4 style="color:var(--paper-invert);">Social Support:</h4>
                 <p> Social comparison:<br>
                     Users can compare engagement levels by viewing earned badges.<br><br>
                     
@@ -209,7 +227,7 @@
         </div>
         <div class="image-grid">
             <img src="../../static/images/pause/mockup4.png" alt="System Credibility Support Screens" class="blacknwhite">
-            <div><h4 style="color:white;">System Credibility Support:</h4>
+            <div><h4 style="color:var(--paper-invert);">System Credibility Support:</h4>
                 <p> Trustworthiness:<br>
                     The app offers evidence-based information from peer-reviewed sources and uses validated questionnaires for symptom status during onboarding.<br><br>
                     
@@ -245,21 +263,21 @@
 
         <section class="content-section" id="prototypingsection">
         <h2>Prototyping</h2>
-        <h4 style="color:white;">Primary Task Support</h4>
+        <h4 style="color:var(--paper-invert);">Primary Task Support</h4>
         <p>Log Symptoms Logging symptoms should be easy and frictionless. Thus, we made deletion more intuitive and reduced the number of clicks in logging a new symptom.</p>
         <img src="../../static/images/pause/mock1.png" alt="Primary Task Support Screens Redesign" class="prototype-image blacknwhite"><br><br>
-        <h4 style="color:white;">Primary Task Support</h4>
+        <h4 style="color:var(--paper-invert);">Primary Task Support</h4>
         <p>Insights ‘Log Symptoms’ was added to the Insights page for users to easily update their symptom data</p>
         <img src="../../static/images/pause/mock2.png" alt="Primary Task Support Screens Redesign" class="prototype-image blacknwhite"><br><br>
-        <h4 style="color:white;">Social Support</h4>
+        <h4 style="color:var(--paper-invert);">Social Support</h4>
         <p>To promote a safe environment, participants suggested to anonymise all users, remove easy sharing, and have a privacy setting restricting chats from ‘Friends’. Furthermore, ‘Levels’ were made visible so others can identify users’ engagement and removed footer for single articles so users can read it better.</p>
         <img src="../../static/images/pause/mock3.png" alt="Social Support Screens Redesign" class="prototype-image blacknwhite"><br><br>
-        <h4 style="color:white;">Points and Rewards</h4>
+        <h4 style="color:var(--paper-invert);">Points and Rewards</h4>
         <p>A pop-up notification was added to inform users of task completion and the points earned. This is expected to encourage users to engage more actively.</p>
         <img src="../../static/images/pause/mock4.png" alt="Points and Rewards Screens Redesign" class="prototype-image blacknwhite" style="width:60%;"><br><br>
-        <h4 style="color:white;">Points and Rewards</h4>
+        <h4 style="color:var(--paper-invert);">Points and Rewards</h4>
         <p>Dialogue Support: Participants liked the notifications feature deeming it helpful.</p><br><br>
-            <h4 style="color:white;">System Credibility Support</h4>
+            <h4 style="color:var(--paper-invert);">System Credibility Support</h4>
             <p>Participants agreed that the ‘Research Papers’ on ‘Explore’ provided immediate credibility to the information provided.
             
             </p>
@@ -392,6 +410,7 @@
         let year = d.getFullYear();
         document.getElementById("demo").innerHTML = year;
         </script>
+        <script src="../../script/theme-script.js"></script>
       </body>
 </body>
 </html>
