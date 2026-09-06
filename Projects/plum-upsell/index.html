@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4L8B7JL0S4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4L8B7JL0S4');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <link href="../../static/css/portfolio.css" rel="stylesheet">
+    <link rel="icon" href="../../static/images/JL.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Subscription Upsell Redesign, Plum</title>
+    <style>
+        :root { --accent-color: #7B3FE4 !important; }
+        body { background: var(--light-color); }
+        .nav-links  { justify-content: flex-end; }
+        .nav-links2 { justify-content: center; }
+
+        @media (max-width: 600px) { .stats-bar { grid-template-columns: 1fr; } }
+
+        /* ── Cards ── */
+        .cards-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .cards-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        @media (max-width: 700px) { .cards-2, .cards-3 { grid-template-columns: 1fr; } }
+
+        .card {
+            border-radius: 14px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+        }
+        .card-accent { border-top: 4px solid var(--accent-color); }
+        .card-red    { border-top: 4px solid #a52927; }
+        .card-green  { border-top: 4px solid #2e7d32; }
+        .card h4 {
+            font-size: 0.95rem;
+            font-weight: 800;
+            margin: 0 0 0.5rem;
+        }
+        .card p {
+            font-size: 0.87rem;
+            line-height: 1.65;
+            margin: 0;
+            color: var(--text-secondary, #555);
+        }
+        .card .eyebrow {
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-color);
+            margin-bottom: 0.45rem;
+        }
+        .card .eyebrow.red   { color: #a52927; }
+        .card .eyebrow.green { color: #2e7d32; }
+
+        /* ── Role block ── */
+        .role-block {
+            border-radius: 14px;
+            padding: 1.75rem 2rem;
+            margin: 1.5rem 0 2.5rem;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+            border-left: 4px solid var(--accent-color);
+        }
+        .role-block h4 {
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent-color);
+            margin: 0 0 0.75rem;
+        }
+        .role-block p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin: 0 0 0.75rem;
+            color: var(--text-secondary, #555);
+        }
+        .role-block p:last-child { margin-bottom: 0; }
+        .role-block strong { color: inherit; }
+
+        /* ── Before / After ── */
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+        .ba-side {
+            padding: 1.5rem 2rem 2rem;
+        }
+        .ba-before { background: rgba(0,0,0,0.05); }
+        .ba-after  { background: rgba(123,63,228,0.07); }
+        .ba-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.2rem 0.75rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+        .ba-before .ba-label { background: rgba(0,0,0,0.12); color: #555; }
+        .ba-after  .ba-label { background: var(--accent-color); color: #fff; }
+        .ba-side img { width: 100%; border-radius: 10px; }
+        .ba-caption {
+            font-size: 0.78rem;
+            color: #888;
+            margin-top: 0.75rem;
+            line-height: 1.5;
+        }
+        @media (max-width: 700px) { .before-after { grid-template-columns: 1fr; } }
+
+        /* ── Insight block ── */
+        .insight-block {
+            border-radius: 16px;
+            padding: 2rem 2.5rem;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .insight-block::before {
+            content: '\201C';
+            position: absolute;
+            top: -1rem;
+            left: 1.5rem;
+            font-size: 8rem;
+            color: rgba(123,63,228,0.2);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        .insight-block p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.7;
+            margin: 0;
+            position: relative;
+        }
+        .insight-block .source {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 0.75rem;
+            display: block;
+        }
+
+        /* ── Big insight statement ── */
+        .insight-hero {
+            padding: 3rem 1rem 2.5rem;
+            text-align: center;
+            margin: 1rem 0 2.5rem;
+            border-radius: 20px;
+        }
+        .insight-hero .ih-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        .big-statement {
+            font-size: 2.1rem;
+            font-weight: 800;
+            line-height: 1.35;
+            max-width: 820px;
+            margin: 0 auto;
+            color: inherit;
+        }
+        @media (max-width: 700px) { .big-statement { font-size: 1.5rem; } }
+        .big-statement em { color: var(--accent-color); font-style: normal; }
+
+        /* ── Decision item screenshot ── */
+        .decision-item img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 0.6rem;
+        }
+
+        /* ── Competitors ── */
+        .comp-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        @media (max-width: 800px) { .comp-grid { grid-template-columns: 1fr 1fr; } }
+        .comp-card {
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+        }
+        .comp-card .comp-name {
+            font-size: 0.85rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+        .comp-card .comp-tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.15rem 0.55rem;
+            border-radius: 20px;
+            margin-bottom: 0.6rem;
+        }
+        .comp-tag.good {  color: #2e7d32; }
+        .comp-tag.bad  { color: #b71c1c; }
+        .comp-card ul {
+            margin: 0;
+            padding-left: 1rem;
+            font-size: 0.8rem;
+            line-height: 1.7;
+            color: var(--text-secondary, #555);
+        }
+
+        /* ── Goal-based personalisation callout ── */
+        .goal-flow {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            margin: 1.5rem 0;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+        .goal-flow .gf-step {
+            flex: 1;
+            padding: 1.25rem;
+            border-right: 2px solid rgba(123,63,228,0.12);
+            text-align: center;
+        }
+        .goal-flow .gf-step:last-child { border-right: none; }
+        .goal-flow .gf-step .gf-num {
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            font-size: 0.75rem;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.6rem;
+        }
+        .goal-flow .gf-step h5 {
+            font-size: 0.82rem;
+            font-weight: 800;
+            margin: 0 0 0.3rem;
+        }
+        .goal-flow .gf-step p {
+            font-size: 0.75rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+        @media (max-width: 700px) { .goal-flow { flex-direction: column; } }
+
+        /* ── Tier badges ── */
+        .tier-badges {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+        .tier-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 1rem;
+            border-radius: 30px;
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+        .tier-plus  { background: #fde8f0; color: #9d174d; }
+        .tier-boost { background: #fef0e0; color: #92400e; }
+        .tier-max   { background: #ede8fc; color: #4c1d95; }
+
+        /* ── Feature row ── */
+        .feature-row {
+            display: grid;
+            grid-template-columns: 1fr 1.8fr;
+            gap: 2.5rem;
+            align-items: center;
+            margin: 2rem 0;
+        }
+        .feature-row.flip { grid-template-columns: 1.8fr 1fr; }
+        @media (max-width: 700px) { .feature-row, .feature-row.flip { grid-template-columns: 1fr; } }
+        .feature-row img { width: 100%; border-radius: 12px; }
+        .feature-text .feat-num {
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent-color);
+            margin-bottom: 0.4rem;
+        }
+        .feature-text h3 { margin: 0 0 0.75rem; font-size: 1.2rem; }
+        .feature-text p  { font-size: 0.9rem; line-height: 1.7; color: var(--text-secondary, #555); margin: 0 0 0.8rem; }
+
+        /* ── Caption ── */
+        .cap { font-size: 0.77rem; color: #999; text-align: center; margin-top: 0.5rem; font-style: italic; }
+
+        /* ── Variant pair ── */
+        .variant-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        @media (max-width: 700px) { .variant-pair { grid-template-columns: 1fr; } }
+        .vcard {
+            border-radius: 14px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+        }
+        .vcard img { width: 100%; border-radius: 8px; margin-top: 1rem; }
+        .vcard h4 { font-size: 0.95rem; font-weight: 800; margin: 0.6rem 0 0.3rem; }
+        .vcard p  { font-size: 0.84rem; margin: 0; color: #555; line-height: 1.55; }
+        .vtag {
+            font-size: 0.68rem; font-weight: 800; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 0.2rem 0.65rem;
+            border-radius: 20px; display: inline-block;
+        }
+        .vtag-a { color: #4c1d95; }
+        .vtag-b { color: #1b5e20; }
+
+        /* ── Stat strip ── */
+        .stat-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0 2rem;
+        }
+        @media (max-width: 700px) { .stat-strip { grid-template-columns: 1fr; } }
+        .stat-item {
+            border-radius: 14px;
+            padding: 1.5rem 1.5rem 1.6rem;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+            border-top: 4px solid #a52927;
+        }
+        .stat-item .stat-num {
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: #a52927;
+            line-height: 1.1;
+        }
+        .stat-item .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary, #555);
+            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+
+        /* ── Data table ── */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.25rem 0 1.75rem;
+            font-size: 0.84rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+        }
+        .data-table th, .data-table td {
+            padding: 0.7rem 0.9rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+        .data-table th {
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            background: rgba(123,63,228,0.1);
+            color: var(--accent-color);
+        }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table td.num { font-weight: 700; }
+
+        /* ── Numbered failure-point grid (kept for the supporting/expandable detail) ── */
+        .fail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.1rem;
+            margin: 1.25rem 0 1rem;
+        }
+        @media (max-width: 700px) { .fail-grid { grid-template-columns: 1fr; } }
+        .fail-item {
+            display: flex;
+            gap: 0.9rem;
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+        }
+        .fail-item .fail-num {
+            flex: 0 0 auto;
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            background: rgba(165,41,39,0.12);
+            color: #a52927;
+            font-size: 0.75rem;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fail-item h5 {
+            font-size: 0.87rem;
+            font-weight: 800;
+            margin: 0 0 0.35rem;
+        }
+        .fail-item p {
+            font-size: 0.82rem;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text-secondary, #555);
+        }
+
+        /* ── Supporting detail disclosure ── */
+        details.supporting {
+            margin: 1.25rem 0 2rem;
+            border-radius: 14px;
+            padding: 0;
+        }
+        details.supporting summary {
+            cursor: pointer;
+            list-style: none;
+            padding: 0.9rem 1.25rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        details.supporting summary::-webkit-details-marker { display: none; }
+        details.supporting summary::before {
+            content: '+';
+            font-size: 1rem;
+            font-weight: 900;
+            display: inline-flex;
+            width: 18px; height: 18px;
+            align-items: center; justify-content: center;
+        }
+        details.supporting[open] summary::before { content: '–'; }
+        details.supporting .supporting-inner { padding: 0 1.25rem 1.25rem; }
+
+        /* ── Funnel strip ── */
+        .funnel-strip {
+            display: flex;
+            align-items: stretch;
+            margin: 1.5rem 0 2rem;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+        .funnel-strip .fn-step {
+            flex: 1;
+            padding: 1.1rem 1rem;
+            text-align: center;
+            border-right: 2px solid rgba(165,41,39,0.12);
+        }
+        .funnel-strip .fn-step:last-child { border-right: none; }
+        .funnel-strip .fn-pct {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: #a52927;
+        }
+        .funnel-strip .fn-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary, #555);
+            margin-top: 0.35rem;
+            line-height: 1.4;
+        }
+        @media (max-width: 700px) { .funnel-strip { flex-direction: column; } }
+
+        /* ── Decision / Why pairs ── */
+        .decision-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin: 1.5rem 0 2rem;
+        }
+        .decision-item {
+            display: grid;
+            grid-template-columns: 32px 1.4fr 1.4fr 2fr;
+            gap: 1.5rem;
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+            align-items: start;
+        }
+        @media (max-width: 900px) { .decision-item { grid-template-columns: 1fr; } }
+        .decision-item .d-num {
+            font-size: 0.75rem;
+            font-weight: 900;
+            color: var(--accent-color);
+        }
+        .decision-item h5 {
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin: 0 0 0.4rem;
+            color: var(--text-secondary, #555);
+        }
+        .decision-item p {
+            font-size: 0.87rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ── Change list (What changed section) ── */
+        .change-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            max-width: 780px;
+        }
+        .change-item {
+            border-radius: 12px;
+            padding: 1.1rem 1.4rem;
+            box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+        }
+        .change-item .change-from-to {
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            margin-bottom: 0.35rem;
+        }
+        .change-item p {
+            font-size: 0.87rem;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text-secondary, #555);
+        }
+    </style>
+</head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">︿</button>
+
+    <nav id="navbar">
+        <input type="checkbox" id="nav" class="hidden">
+        <label for="nav" class="nav-btn"><i></i><i></i><i></i></label>
+        <div class="image-header">
+            <a href="/"><img class="logo" src="../../static/images/JL.png" alt="Logo"/></a>
+        </div>
+        <div class="nav-links">
+            <a class="nav-link" id="navlink1" href="/#projects">
+                <i class="fa-solid fa-arrow-left"></i> Back to All Projects
+            </a>
+            <div class="theme-toggle-container">
+                <button class="theme-toggle" aria-label="Toggle theme mode">
+                    <span class="toggle-option sun"><i class="toggle-icon fas fa-sun"></i></span>
+                    <span class="toggle-option moon"><i class="toggle-icon fas fa-moon"></i></span>
+                    <span class="toggle-slider"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- IMAGE: cover.png -->
+    <section class="case-study-hero"
+             style="background-image: url('../../static/images/upsell-redesign-cover.png')">
+        <div class="hero-content">
+            <h1 style="text-shadow: 2px 2px 15px rgba(0,0,0,0.5);">
+                Subscription Upsell Redesign
+            </h1>
+        </div>
+    </section>
+
+    <section class="project-details">
+        <p>
+            Plum didn't just have a conversion problem, it had a context problem: users told Plum what they wanted at onboarding, then the subscription experience forgot it. This project follows that thread, from why most users never reach an upsell to a redesign that carries a stated goal into the moment they're asked to pay.
+        </p>
+        <div class="details-grid">
+            <div class="detail-item"><h3>Aim</h3><p>Increase upgrade conversion and annual plan uptake by redesigning the upsell experience end-to-end</p></div>
+            <div class="detail-item"><h3>Duration</h3><p>2025 · 3 weeks</p></div>
+            <div class="detail-item"><h3>Company</h3><p>Plum</p></div>
+            <div class="detail-item"><h3>Role</h3><p>Product Designer</p></div>
+            <div class="detail-item"><h3>Tools</h3><p>Figma</p></div>
+        </div>
+
+        <div class="role-block">
+            <h4>My role</h4>
+            <p>I owned the UX direction for the subscription upgrade experience end to end: conversion data and existing flows, personalisation strategy, the upsell and billing journeys, and preparing the experience for experimentation.</p>
+            <p><strong>Worked closely with:</strong> Product, Engineering, Data &nbsp;·&nbsp; <strong>Owned:</strong> UX strategy, interaction design, prototypes, experiment hypotheses</p>
+        </div>
+    </section>
+
+    <section class="timeline">
+        <div class="timeline-item"><a href="#problemsection"><h5>Problem</h5></a></div>
+        <div class="timeline-item"><a href="#insightsection"><h5>Key Insight</h5></a></div>
+        <div class="timeline-item"><a href="#researchsection"><h5>Research</h5></a></div>
+        <div class="timeline-item"><a href="#strategysection"><h5>Strategy</h5></a></div>
+        <div class="timeline-item"><a href="#solutionsection"><h5>Solution</h5></a></div>
+        <div class="timeline-item"><a href="#flowssection"><h5>Flows</h5></a></div>
+        <div class="timeline-item"><a href="#rolloutsection"><h5>Validation</h5></a></div>
+        <div class="timeline-item"><a href="#reflectionsection"><h5>Reflection</h5></a></div>
+    </section>
+
+
+    <!-- ══ PROBLEM ══════════════════════════════════════════════════════════════ -->
+    <section class="content-section" id="problemsection">
+        <h2>The Problem</h2>
+        <p>Plum has three paid tiers, Plus, Boost and Max, but nothing in the upgrade journey worked in their favour. Users were leaving before they ever saw an upsell, and the ones who reached it were met with a generic, one-size-fits-all screen.</p>
+
+        <div class="stat-strip">
+            <div class="stat-item">
+                <div class="stat-num">59%</div>
+                <div class="stat-label">of onboarding starters (~24,000/mo) never see an upsell at all</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">66%</div>
+                <div class="stat-label">of subscriptions are won on Day 1, the window this all happens in</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">27%</div>
+                <div class="stat-label">conversion from high-intent entry points, vs. 4-5% from generic ones</div>
+            </div>
+        </div>
+
+        <!-- IMAGE: existing-experience.png -->
+        <img src="../../static/images/plum/existing-screens.png"
+             alt="Original upsell experience, generic screens, no tier differentiation, no billing cycle"
+             style="width:70%; border-radius:14px; margin: 1.5rem 0;">
+        <p class="cap">The original experience: identical layouts for all three tiers, no billing cycle choice, no value anchoring</p>
+
+        <h3 style="margin-top:2.5rem;">What was getting in the way?</h3>
+
+        <div class="cards-2">
+            <div class="card card-red">
+                <div class="eyebrow red">Problem 01</div>
+                <h4>Value wasn't communicated before price</h4>
+                <p>The experience led with cost rather than the reason to upgrade, and Plum's strongest arguments (stacked-value tiers, named perks, ROI on fees) were never made explicit.</p>
+            </div>
+            <div class="card card-red">
+                <div class="eyebrow red">Problem 02</div>
+                <h4>Comparing tiers required too much work</h4>
+                <p>Tab-switching between 20+ item lists isn't comparison. Nothing flagged the handful of items that actually differentiate a tier, and there was no signal for which tier most people choose.</p>
+            </div>
+            <div class="card card-red">
+                <div class="eyebrow red">Problem 03</div>
+                <h4>The experience ignored user intent</h4>
+                <p>A user coming from a specific feature gate, already convinced, and one browsing the subs tab out of curiosity received the exact same generic pitch.</p>
+            </div>
+            <div class="card card-red">
+                <div class="eyebrow red">Problem 04</div>
+                <h4>The billing decision added friction it didn't need to</h4>
+                <p>Tier selection and billing-cycle selection were coupled into one decision, so annual billing was easy to miss and the core "which tier" choice felt heavier than it needed to.</p>
+            </div>
+        </div>
+
+        <details class="supporting">
+            <summary>View detailed UX audit + entry-point data</summary>
+            <div class="supporting-inner">
+                <h4 style="margin-top:0.5rem;">In the upsell modal</h4>
+                <div class="fail-grid">
+                    <div class="fail-item"><div class="fail-num">1</div><div><h5>Not visibly swipeable</h5><p>Three anonymous dots, no labels. Users who land on Max just dismiss rather than discover Plus at £3.99.</p></div></div>
+                    <div class="fail-item"><div class="fail-num">2</div><div><h5>One design, two intents</h5><p>"Which plan unlocks this?" vs. "which plan is right for me?" One layout served neither well.</p></div></div>
+                    <div class="fail-item"><div class="fail-num">3</div><div><h5>Price before value</h5><p>£11.99/mo sits under the tier name before a single benefit is shown, sticker shock too early.</p></div></div>
+                    <div class="fail-item"><div class="fail-num">4</div><div><h5>"Everything in [tier]" unexplained</h5><p>Boost says "Everything in Plus" with no context. The strongest stacked-value argument was invisible.</p></div></div>
+                    <div class="fail-item"><div class="fail-num">5</div><div><h5>Max's best perks as icons</h5><p>Travel insurance, cinema tickets, dining discounts, Plum's most concrete perks, shown as two unlabelled circles.</p></div></div>
+                    <div class="fail-item"><div class="fail-num">6</div><div><h5>No ROI framing</h5><p>AER rates exist but are never tied to the fee. "Boost pays for itself at £X saved" was missing.</p></div></div>
+                    <div class="fail-item"><div class="fail-num">7</div><div><h5>No daily cost reframe</h5><p>Only monthly price shown. Plus at £3.99/mo is 13p/day, a smaller barrier, never used.</p></div></div>
+                    <div class="fail-item"><div class="fail-num">8</div><div><h5>Commitment anxiety unaddressed</h5><p>Direct debit disclosure is the most prominent text before the CTA; "cancel anytime" is small print.</p></div></div>
+                </div>
+                <h4>In the comparison view (paywall)</h4>
+                <div class="fail-grid">
+                    <div class="fail-item"><div class="fail-num">1</div><div><h5>Tab-switching isn't comparison</h5><p>Can't see two tiers at once, unrealistic on a 20+ item list per tier.</p></div></div>
+                    <div class="fail-item"><div class="fail-num">2</div><div><h5>Lists too long to decide from</h5><p>20+ items across four categories reads as a reference doc, not a decision tool.</p></div></div>
+                    <div class="fail-item"><div class="fail-num">3</div><div><h5>No progressive disclosure</h5><p>Every feature at equal weight, nothing flags the 3-4 items that actually differentiate tiers.</p></div></div>
+                    <div class="fail-item"><div class="fail-num">4</div><div><h5>No anchoring signal</h5><p>No "most popular" tier. Uncertain users default to cheapest, or disengage.</p></div></div>
+                    <div class="fail-item"><div class="fail-num">5</div><div><h5>Same paywall, any entry intent</h5><p>A feature-gate user needs confirmation, not the full list. The paywall never adapted.</p></div></div>
+                </div>
+                <h4>Entry-point data</h4>
+                <table class="data-table" style="margin-bottom:0;">
+                    <thead>
+                        <tr><th>Entry point</th><th>Entry type</th><th>Views / mo</th><th>Conversions / mo</th><th>CVR</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Subs tab</td><td>Generic</td><td class="num">16,544</td><td class="num">675</td><td class="num">4%</td></tr>
+                        <tr><td>Toolbar / home CTA</td><td>Generic</td><td class="num">11,711</td><td class="num">555</td><td class="num">5%</td></tr>
+                        <tr><td>Manage subscription</td><td>Generic</td><td class="num">5,771</td><td class="num">1,571</td><td class="num">27%</td></tr>
+                        <tr><td>Feature gate (funds)</td><td>Feature gate</td><td class="num">6,572</td><td class="num">1,490</td><td class="num">23%</td></tr>
+                        <tr><td>Feature gate (card tile)</td><td>Feature gate</td><td class="num">12,114</td><td class="num">146</td><td class="num">1%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
+        <div class="insight-block">
+            <p>Generic entries (subs tab, home CTA) brought 28,000+ views/mo at ~4-5% CVR, willing to look, not converting, while "Manage subscription" converted at 27% on the same broken UX. That gap suggested that intent was a major driver of conversion, and that improving the experience for high-intent users could unlock significant upside.</p>
+            <span class="source">Subs planning insights, May 2026</span>
+        </div>
+    </section>
+
+
+    <!-- ══ KEY INSIGHT / PURPOSE GAP ══════════════════════════════════════════════ -->
+    <section class="content-section" id="insightsection">
+        <h2>What I Discovered</h2>
+
+        <div class="insight-hero">
+            <div class="ih-eyebrow">The reframe</div>
+            <p class="big-statement">What if the upgrade problem didn't start at the paywall at all? <em>What if it started with what users had already told Plum they wanted?</em></p>
+        </div>
+
+        <p>The 59% who never saw an upsell weren't lost randomly, most had already declared a financial goal at the Purpose screen before they dropped off. That signal existed and wasn't being used, which became the central design opportunity: an upsell that re-engages with a goal the user already stated, not a cold, generic pitch.</p>
+
+        <div class="funnel-strip">
+            <div class="fn-step">
+                <div class="fn-pct">~6,000/mo</div>
+                <div class="fn-label">exit Purpose before selecting a goal</div>
+            </div>
+            <div class="fn-step">
+                <div class="fn-pct">~11,000/mo</div>
+                <div class="fn-label">select a goal, then exit anyway, the biggest gap</div>
+            </div>
+            <div class="fn-step">
+                <div class="fn-pct">~8,500/mo</div>
+                <div class="fn-label">exit mid onboarding (Cash ISA, Savings setup)</div>
+            </div>
+        </div>
+        <p style="font-size:0.87rem; color:var(--text-secondary,#555);">Non-PLG users drop even harder: <strong>68%</strong> vs. <strong>13%</strong> (PLG) between Purpose and onboarding, <strong>45%</strong> vs. <strong>22%</strong> during onboarding.</p>
+
+        <h3 style="margin-top:2.5rem;">The Purpose Gap Upsell</h3>
+        <p>Rather than living inside the upgrade flow, this greets the user the next time they re-open the app after exiting mid Purpose flow, and leads with the goal they'd already told Plum about.</p>
+
+        <div class="goal-flow">
+            <div class="gf-step"><div class="gf-num" style="color:white;">1</div><h5>User exits onboarding</h5></div>
+            <div class="gf-step"><div class="gf-num" style="color:white;">2</div><h5>User re-opens Plum</h5></div>
+            <div class="gf-step"><div class="gf-num" style="color:white;">3</div><h5>Goal-aware bottom sheet</h5></div>
+            <div class="gf-step"><div class="gf-num" style="color:white;">4</div><h5>Non-blocking, always dismissible</h5></div>
+        </div>
+        <p style="font-size:0.87rem; color:var(--text-secondary,#555);">Personalisation follows a priority order: product onboarding in progress first, then a selected Purpose, then the most recently viewed option, falling back to a generic benefit-led message only when none of those exist.</p>
+
+        <h4 style="margin-top:2rem; font-size:0.95rem;">Two examples, same mechanic</h4>
+        <div class="variant-pair">
+            <div class="vcard">
+                <span class="vtag vtag-a">Goal: Cash ISA</span>
+                <img src="../../static/images/plum/purpose-gap-cash-isa.png" alt="Purpose Gap Upsell bottom sheet for a user whose goal is a Cash ISA" style="width:30%;">
+            </div>
+            <div class="vcard">
+                <span class="vtag vtag-b">Goal: Save automatically</span>
+                <img src="../../static/images/plum/purpose-gap-automations.png" alt="Purpose Gap Upsell bottom sheet for a user whose goal is automated saving" style="width:30%;">
+            </div>
+        </div>
+        <p class="cap">Same bottom-sheet mechanic, different goal, different headline and benefit. Shown here as the Goal Bridge framing, prioritised for the initial Cash ISA and Savings/Automations rollout.</p>
+    </section>
+
+
+    <!-- ══ RESEARCH ══════════════════════════════════════════════════════════════ -->
+    <section class="content-section" id="researchsection">
+        <h2>Research &amp; Competitor Analysis</h2>
+        <p>I looked at how other subscription apps handle the upsell moment, focusing the audit on value communication, pricing psychology, plan comparison and decision friction, and mapped each back to a failure point in Plum's experience:</p>
+
+
+        <div class="insight-block">
+            <p>Across the apps I reviewed, the best upsells sold an outcome rather than a feature list. I didn't see any of them personalise the pitch to a goal the user had already stated, that's the opportunity I built the strategy around.</p>
+            <span class="source">Synthesis from competitor audit</span>
+        </div>
+    </section>
+
+
+    <!-- ══ STRATEGY ══════════════════════════════════════════════════════════════ -->
+    <section class="content-section" id="strategysection">
+        <h2>Design Strategy</h2>
+        <p>Plum's clearest winning narrative is:</p>
+
+        <div class="insight-block" style="margin-bottom:2rem;">
+            <p>"If your goal is to build wealth, save intelligently, and earn more from your cash, Plum delivers the highest financial return on your subscription."</p>
+            <span class="source">Plum value proposition, the thread running through every upsell screen</span>
+        </div>
+
+        <p>Three principles translated this narrative into design decisions:</p>
+
+        <div class="cards-3">
+            <div class="card card-accent">
+                <div class="eyebrow">Principle 01</div>
+                <h4>Goal-first, not feature-first</h4>
+                <p>Surface the one benefit most relevant to why this user is here, not a generic list of everything the tier includes.</p>
+            </div>
+            <div class="card card-accent">
+                <div class="eyebrow">Principle 02</div>
+                <h4>Make price feel obvious</h4>
+                <p>Reframe subscription cost as a daily micro-investment: "that's 26p/day" lands differently than "£7.99/mo".</p>
+            </div>
+            <div class="card card-accent">
+                <div class="eyebrow">Principle 03</div>
+                <h4>Tier before billing</h4>
+                <p>Decouple tier selection from billing cycle, let users commit to the tier first, then choose how to pay, keeping annual in play without overwhelming the decision.</p>
+            </div>
+        </div>
+
+        <h3 style="margin-top:2.5rem;">Goal-based personalisation</h3>
+        <p>With 66% of subscriptions won on Day 1, personalisation had to start at the Purpose screen, not just on the upsell. A user who said "save more" sees an AER-led headline; "grow my wealth" sees investment perks and market-leading rates.</p>
+
+        <div class="goal-flow">
+            <div class="gf-step">
+                <div class="gf-num" style="color:white;">1</div>
+                <h5>Purpose screen</h5>
+                <p>User selects their financial goal: "Save more", "Invest &amp; grow", "Build wealth"</p>
+            </div>
+            <div class="gf-step">
+                <div class="gf-num" style="color:white;">2</div>
+                <h5>Goal stored</h5>
+                <p>Selection persists and informs downstream personalisation, including upsell triggers</p>
+            </div>
+            <div class="gf-step">
+                <div class="gf-num" style="color:white;">3</div>
+                <h5>Contextual upsell</h5>
+                <p>Headline and feature highlights adapt to the user's stated goal, not a generic template</p>
+            </div>
+            <div class="gf-step">
+                <div class="gf-num" style="color:white;">4</div>
+                <h5>Billing choice</h5>
+                <p>"Choose billing cycle" or "Start free trial", tested as separate A/B variants</p>
+            </div>
+        </div>
+
+        <div class="tier-badges">
+            <span class="tier-badge tier-plus">Plus · Save more · AER-led · 13p/day</span>
+            <span class="tier-badge tier-boost">Boost · Earn more · AER + cashback · 26p/day</span>
+            <span class="tier-badge tier-max">Max · Build wealth · Perks + market rates · 39p/day</span>
+        </div>
+
+        <p style="font-size:0.87rem; color:var(--text-secondary,#555); margin-top:1rem;">This is the always-available upsell, reached from the subs tab, a feature gate, or the paywall. It's a separate surface from the Purpose Gap re-entry intercept above, which only fires for users who dropped out of the Purpose flow in the first place.</p>
+    </section>
+
+
+    <!-- ══ SOLUTION ══════════════════════════════════════════════════════════════ -->
+    <section class="content-section" id="solutionsection">
+        <h2>The Redesign</h2>
+
+        <div class="before-after">
+            <div class="ba-side ba-before">
+                <span class="ba-label">Before</span>
+                <!-- IMAGE: existing-experience.png -->
+                <img src="../../static/images/plum/existing-screens.png"
+                     alt="Original generic upsell screens">
+                <p class="ba-caption">One template for all tiers. No tier identity, no billing choice, no value framing, no personalisation.</p>
+            </div>
+            <div class="ba-side ba-after">
+                <span class="ba-label">After</span>
+                <!-- IMAGE: proposal-1.png -->
+                <img src="../../static/images/plum/proposal-1.png"
+                     alt="Redesigned tier screens, goal-specific, colour-coded, micro-priced">
+                <p class="ba-caption">Tier-specific headlines. Micro-pricing anchors. Billing cycle CTA. Colour-coded visual identity per tier.</p>
+            </div>
+        </div>
+
+        <h3 style="margin-top:2.5rem;">Design decisions</h3>
+        <div class="decision-list">
+            <div class="decision-item">
+                <div class="d-num">01</div>
+                <div>
+                    <h5>Decision</h5>
+                    <p>Lead with the outcome: "Earn more from your savings" rather than "Boost, £7.99/month". Max's perks (travel insurance, cinema, dining) are named inline instead of shown as icons.</p>
+                </div>
+                <div>
+                    <h5>Why</h5>
+                    <p>Users need to understand the value before evaluating the price. Naming concrete perks resolves the "unlabelled icon" and "everything in Plus" gaps from the original modal.</p>
+                </div>
+                <div>
+                    <img src="../../static/images/plum/proposal-11.png" alt="Tier screen leading with the outcome and named perks">
+                </div>
+            </div>
+            <div class="decision-item">
+                <div class="d-num">02</div>
+                <div>
+                    <h5>Decision</h5>
+                    <p>Every price carries a daily-cost line: £7.99/month becomes "that's 26p/day".</p>
+                </div>
+                <div>
+                    <h5>Why</h5>
+                    <p>Designed to make the recurring cost feel more tangible and less intimidating at the moment price first appears.</p>
+                </div>
+                <div>
+                    <img src="../../static/images/plum/proposal-1.png" alt="Tier screen with daily-cost pricing line">
+                </div>
+            </div>
+            <div class="decision-item">
+                <div class="d-num">03</div>
+                <div>
+                    <h5>Decision</h5>
+                    <p>Separate tier selection from billing: Plan → Billing cycle → Payment, instead of Plan → Payment.</p>
+                </div>
+                <div>
+                    <h5>Why</h5>
+                    <p>Keeps the "which tier" decision simple while making annual billing genuinely discoverable rather than buried in settings.</p>
+                </div>
+                <div>
+                    <img src="../../static/images/plum/proposal-free-trial.png" alt="Billing cycle step between plan and payment">
+                </div>
+            </div>
+        </div>
+
+        <!-- Billing cycle -->
+        <section class="content-section2 darker">
+            <h3>New step: billing cycle selection</h3>
+            <p>A dedicated billing-cycle step now sits between tier and payment. Previously: upsell → payment. Now: upsell → billing cycle (monthly or annual, savings shown) → payment, so annual is never missed and tier choice stays uncluttered.</p>
+
+            <div class="variant-pair">
+                <div class="vcard">
+                    <h4>Choose billing cycle</h4>
+                    <p>Price shown monthly with "that's Xp/day" anchor. Annual option surfaced as a savings unlock on the next step.</p>
+                    <!-- IMAGE: proposal-1.png -->
+                    <img src="../../static/images/plum/proposal-1.png" alt="Billing cycle CTA variant">
+                </div>
+                <div class="vcard">
+                    <h4>Start free trial</h4>
+                    <p>"1 month free, then £7.99/mo", trial removes the first payment barrier.</p>
+                    <!-- IMAGE: proposal-free-trial.png -->
+                    <img src="../../static/images/plum/proposal-free-trial.png" alt="Free trial CTA variant">
+                </div>
+            </div>
+        </section>
+
+        <!-- Billing constraints -->
+        <section class="content-section2 lighter">
+            <h3>Designing within real product constraints</h3>
+            <p>The experience had to reflect existing billing rules, including prorating, deferred downgrades, and the incompatibility between annual billing and free trials, worked through with the platform team's annual billing PRD.</p>
+            <details class="supporting">
+                <summary>See the full billing logic</summary>
+                <div class="supporting-inner">
+                    <table class="data-table" style="margin-bottom:0.75rem;">
+                        <thead>
+                            <tr><th>Change</th><th>Timing</th><th>What the user sees</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Monthly → Annual, same or higher tier</td><td class="num">Immediate</td><td>Annual billing starts right away, prorated</td></tr>
+                            <tr><td>Annual → Monthly, same tier</td><td class="num">Deferred</td><td>Stays on annual until renewal, then switches</td></tr>
+                            <tr><td>Downgrade, any billing</td><td class="num">Deferred</td><td>Keeps current tier until the billing period ends</td></tr>
+                            <tr><td>Cancellation, annual</td><td class="num">Deferred</td><td>Keeps access until the annual period ends, no refund</td></tr>
+                        </tbody>
+                    </table>
+                    <p style="font-size:0.87rem; color:var(--text-secondary,#555); margin:0;">Two constraints shaped the copy: free trials never apply to annual, so trial CTA language can't carry over once annual is selected; and annual → monthly upgrades aren't immediate, so the screen had to explain that, not just block it. The same flows extend to the Legacy UK Annual Migration Cohort, existing annual subscribers with no prior in-app billing controls.</p>
+                </div>
+            </details>
+        </section>
+
+        <!-- Paywall -->
+        <section class="content-section2 lighter">
+            <h3>Redesigned paywall</h3>
+            <p>"See all benefits" was rebuilt as a full plan comparison. A tabbed interface keeps tiers comparable without losing your place. Features are grouped by category with the most differentiating items surfaced first, and the user's current plan stays visible for reference.</p>
+
+            <!-- IMAGE: paywall.png -->
+            <img src="../../static/images/plum/paywall.png"
+                 alt="Redesigned paywall with full feature comparison, tabbed navigation, category grouping"
+                 style="width:50%; border-radius:12px; margin-top:1.5rem;">
+            <p class="cap">Tabbed tier navigation · categorised feature comparison · current plan always visible for reference</p>
+        </section>
+    </section>
+
+
+    <!-- ══ FLOWS ══════════════════════════════════════════════════════════════ -->
+    <section class="content-section" id="flowssection">
+        <h2>End-to-End Flows</h2>
+        <p>Four complete upgrade journeys were designed and handed off, covering every billing-cycle and tier-change combination, from entry point through payment and success state.</p>
+
+        <div class="cards-2" style="margin-bottom:2rem;">
+            <div class="card">
+                <div class="eyebrow">Flow 01</div>
+                <h4>Monthly → Monthly plan change</h4>
+                <p>User upgrading or downgrading between tiers, staying on monthly billing.</p>
+                <!-- IMAGE: flow-monthly-monthly.png -->
+                <img src="../../static/images/plum/flow-monthly-monthly.png"
+                     alt="Monthly to monthly plan change flow"
+                     style="width:100%; border-radius:8px; margin-top:1rem;">
+            </div>
+            <div class="card">
+                <div class="eyebrow">Flow 02</div>
+                <h4>Monthly → Annual upgrade</h4>
+                <p>The key flow for increasing annual-plan adoption, and the one this redesign was built to unlock.</p>
+                <!-- IMAGE: flow-monthly-yearly.png -->
+                <img src="../../static/images/plum/flow-monthly-yearly.png"
+                     alt="Monthly to annual upgrade flow"
+                     style="width:100%; border-radius:8px; margin-top:1rem;">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ══ VALIDATION / ROLLOUT ══════════════════════════════════════════════════ -->
+    <section class="content-section" id="rolloutsection">
+        <h2>Validation</h2>
+        <p>Phased, testable rollout starting with the two highest-volume cohorts, Cash ISA (largest PLG cohort) and Savings/Automations (largest non-PLG cohort), each as an independent A/B test before extending to Investments, Easy Access, LISA, and the generic fallback.</p>
+
+        <div class="cards-2">
+            <div class="card card-accent">
+                <div class="eyebrow">Hypothesis</div>
+                <h4>Goal-aware copy beats generic</h4>
+                <p>A message naming the user's own goal converts better than one generic upsell shown to everyone.</p>
+            </div>
+            <div class="card card-accent">
+                <div class="eyebrow">Hypothesis</div>
+                <h4>Richer content wins on higher intent</h4>
+                <p>A fuller value summary should outperform a single benefit for mid-onboarding exits; comparable for earlier, lower-context exits.</p>
+            </div>
+            <div class="card card-accent">
+                <div class="eyebrow">Guardrail</div>
+                <h4>No drop in onboarding completion</h4>
+                <p>Intercept variants shouldn't reduce completion; exit stays fully dismissible.</p>
+            </div>
+            <div class="card card-accent">
+                <div class="eyebrow">Coordination</div>
+                <h4>Surface separation with cross-sell</h4>
+                <p>A parallel initiative shows cross-sell sheets on the same exit moments. Subscription intercept fires first, cross-sell on dismiss.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ WHAT CHANGED ══════════════════════════════════════════════════════════ -->
+    <section class="content-section2 darker">
+        <h3 style="text-align:center; margin-bottom:0.5rem;">What changed</h3>
+        <p style="text-align:center; max-width:660px; margin:0 auto 2rem; font-size:0.9rem; color:var(--text-secondary,#555);">From a passive product display to a personalised, goal-led conversion moment. These are the design changes shipped for experimentation, not yet measured results.</p>
+
+        <div class="change-list" style="margin-left:auto; margin-right:auto;">
+            <div class="change-item">
+                <div class="change-from-to">From generic → goal-led</div>
+                <p>Upsell messaging now reflects the user's stated financial goal instead of a template shown to everyone.</p>
+            </div>
+            <div class="change-item">
+                <div class="change-from-to">From monthly price → value framing</div>
+                <p>Daily cost and named benefits appear together, before price is the first thing a user sees.</p>
+            </div>
+            <div class="change-item">
+                <div class="change-from-to">From hidden annual plan → deliberate billing choice</div>
+                <p>Annual billing is now a first-class step in the upgrade journey, not something buried in account settings.</p>
+            </div>
+        </div>
+
+        <p style="text-align:center; font-size:0.85rem; color:var(--text-secondary,#555); margin-top:1.5rem;">
+            <strong>Next step:</strong> the Cash ISA and Savings/Automations variants are entering A/B testing against the hypotheses above. Impact figures will be added here once results are in.
+        </p>
+    </section>
+
+
+    <!-- ══ REFLECTION ══════════════════════════════════════════════════════════ -->
+    <section class="content-section" id="reflectionsection">
+        <h2>What I Learned</h2>
+        <p>The biggest shift in this project was realising that subscription conversion wasn't only a paywall problem. The strongest opportunity was earlier in the journey, at the Purpose screen, where users had already expressed intent but the product wasn't carrying that context forward. Redesigning the modal and paywall mattered, but the more durable idea is treating everything a user has already told Plum as an input to the upgrade experience, not just the sign-up flow.</p>
+    </section>
+
+
+    <div class="nav-links2" style="width:100%">
+        <div class="nav-link2" id="navlink1" style="opacity:0.2;">
+            <i class="fa-solid fa-arrow-left"></i> Previous Project
+        </div>
+        <a class="nav-link2" id="navlink2" href="/Projects/plum-cancellation">
+            Next Project <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <section id="contact" class="contact lighter">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p class="fade-in" style="margin-bottom:2rem;">Let's have a talk so you can learn more about my work!</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <a href="mailto:ioanna.lazaridou5@gmail.com">
+                        <i class="fas fa-envelope"></i><br>ioanna.lazaridou5@gmail.com
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <a href="https://www.linkedin.com/in/ioanna-lazaridou/" target="_blank">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i><br>Ioanna Lazaridou
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <a href="tel:+123456789">
+                        <i class="fas fa-phone"></i><br>+30 6987171903<br>+44 7818260729
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footnote">
+        <p>© Copyright&nbsp;<span id="demo"></span>&nbsp;Ioanna Lazaridou | All rights reserved.</p>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('fade-in'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('section').forEach(s => observer.observe(s));
+    </script>
+    <script>
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {
+            mybutton.style.display =
+                (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+        };
+        function topFunction() {
+            document.body.scrollTop = 0; document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script>
+        function reveal() {
+            document.querySelectorAll(".reveal").forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight - 150)
+                    el.classList.add("active");
+                else el.classList.remove("active");
+            });
+        }
+        window.addEventListener("scroll", reveal);
+    </script>
+    <script>document.getElementById("demo").innerHTML = new Date().getFullYear();</script>
+    <script src="../../script/theme-script.js"></script>
+</body>
+</html>

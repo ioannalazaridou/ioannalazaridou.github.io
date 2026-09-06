@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4L8B7JL0S4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4L8B7JL0S4');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <link href="../../static/css/portfolio.css" rel="stylesheet">
+    <link rel="icon" href="../../static/images/plum/JL.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Subscription Cancellation Flow, Plum</title>
+    <style>
+        :root {
+            --accent-color: #7B3FE4!important;
+        }
+        body {
+            background: var(--light-color);
+        }
+        .nav-links{
+            justify-content: flex-end;
+        }
+        .nav-links2{
+            justify-content: center;
+        }
+        .prototype-image, .image-grid img {
+            padding:0.15rem;
+        }
+        .final-container2 {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">︿</button>
+
+    <nav id="navbar">
+        <input type="checkbox" id="nav" class="hidden">
+        <label for="nav" class="nav-btn">
+            <i></i><i></i><i></i>
+        </label>
+        <div class="image-header">
+            <a href="/"><img class="logo" src="../../static/images/JL.png" alt="Logo"/></a>
+        </div>
+        <div class="nav-links">
+            <a class="nav-link" id="navlink1" href="/#projects">
+                <i class="fa-solid fa-arrow-left"></i> Back to All Projects
+            </a>
+            <div class="theme-toggle-container">
+                <button class="theme-toggle" aria-label="Toggle theme mode">
+                    <span class="toggle-option sun"><i class="toggle-icon fas fa-sun"></i></span>
+                    <span class="toggle-option moon"><i class="toggle-icon fas fa-moon"></i></span>
+                    <span class="toggle-slider"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="case-study-hero"
+        style="background-image: url('../../static/images/sub-cancellation.png')">
+        <div class="hero-content">
+            <h1 style="text-shadow: 2px 2px 15px var(--dark-color);">Subscription Cancellation Flow</h1>
+        </div>
+    </section>
+
+    <section class="project-details">
+        <p>A retention-first, four-screen flow for Plum's paid subscribers, replacing a blunt "are you sure?" prompt with tier-specific value reminders and soft off-ramps, so every exit becomes a structured product signal instead of a silent loss.</p>
+
+        <div class="details-grid">
+            <div class="detail-item">
+                <h3>Aim</h3>
+                <p>Reduce voluntary churn from Plum's paid tiers by designing an empathetic cancellation flow that deflects cancellations through value reminders, downgrade alternatives, and structured feedback collection</p>
+            </div>
+            <div class="detail-item">
+                <h3>Duration</h3>
+                <p>2 weeks</p>
+            </div>
+            <div class="detail-item">
+                <h3>Company</h3>
+                <p>Plum</p>
+            </div>
+            <div class="detail-item">
+                <h3>Role</h3>
+                <p>Product Designer</p>
+            </div>
+            <div class="detail-item">
+                <h3>Tools</h3>
+                <p>Figma, FigJam</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section2 lighter" style="display: flex; flex-direction: column; align-items: center;">
+        <h3>Final Screens</h3>
+        <img src="../../static/images/plum/sub-cancellation.png" alt="Final cancellation flow screens overview" class="prototype-image" style="box-shadow:unset; width:100%;">
+    </section>
+
+    <section class="timeline">
+        <div class="timeline-item"><a href="#discoverysection">
+            <h5>Discovery & Research</h5>
+        </a></div>
+        <div class="timeline-item"><a href="#competitorsection">
+            <h5>Competitor Analysis</h5>
+        </a></div>
+        <div class="timeline-item"><a href="#designsection">
+            <h5>Design & Strategy</h5>
+        </a></div>
+        <div class="timeline-item"><a href="#finalscreens">
+            <h5>Final Screens</h5>
+        </a></div>
+    </section>
+
+    <section class="content-section" id="discoverysection">
+        <h2>Discovery & Research</h2>
+        <section class="content-section2 darker">
+            <div class="methodology-grid">
+                <div class="content-section2">
+                    <h3>The Problem</h3>
+                    <p>A one-line "are you sure?" prompt gave no value context, no alternative to leaving, and no way to capture why. Internal data pointed to two solvable causes: cost and underused features.</p>
+                </div>
+                <section class="content-section2 lighter">
+                    <h3>Why This Matters</h3>
+                    <p>Fintech benchmarks show optimised cancellation flows cut successful cancellations by 10–15%. Using static, tier-wide value stats instead of live calculations keeps it a high-impact, low-engineering-lift build.</p>
+                </section>
+            </div>
+        </section>
+
+        <p class="quote">How might we help users make informed decisions about their subscription by clearly showing the value they're receiving and offering flexible alternatives, so they don't cancel impulsively due to lack of awareness or cost concerns?</p>
+
+        <section class="content-section2 lighter">
+            <div class="findings-grid">
+                <div class="finding-card">
+                    <div class="finding-header">
+                        <div class="finding-icon">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h4>Insight</h4>
+                    </div>
+                    <p>An unoptimised cancellation flow is causing preventable churn and lost revenue.</p>
+                </div>
+                <div class="finding-card">
+                    <div class="finding-header">
+                        <div class="finding-icon">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </div>
+                        <h4>Problem</h4>
+                    </div>
+                    <p>How might we surface real value and flexible alternatives, so users don't cancel impulsively?</p>
+                </div>
+                <div class="finding-card">
+                    <div class="finding-header">
+                        <div class="finding-icon">
+                            <i class="fa-solid fa-flask"></i>
+                        </div>
+                        <h4>Hypothesis</h4>
+                    </div>
+                    <p>Value reminders, downgrade offers, and feedback collection will cut cancellations by 10–15% and turn every exit into product data.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section2 darker">
+            <h3>Scoping the Problem Space</h3>
+            <p>Before any screens, I aligned engineering, product, and commercial teams on one document: context, success metrics, user needs, and business goals.</p>
+            <div class="methodology-grid">
+                <div class="content-section2">
+                    <h4>Background</h4>
+                    <p>No optimised cancellation flow exists, users can cancel directly without understanding what they'd lose or seeing alternatives. Graceful flows industry-wide cut successful cancellations by 10–15% through soft off-ramps like downgrades and pauses.</p>
+                </div>
+                <section class="content-section2 lighter">
+                    <h4>Objective</h4>
+                    <p>Deflect cancellations with tier-specific value reminders and targeted alternatives, while gathering clean churn data, using static tier averages instead of personalised calculations to keep engineering lift low.</p>
+                </section>
+            </div>
+        </section>
+        <section class="content-section2 darker">
+        <div class="methodology-grid">
+                        <div class="content-section2">
+                    <h4>User Goals</h4>
+                    <ul>
+                        <li>Value clarity, see what they're actually getting</li>
+                        <li>Cost flexibility, downgrade instead of losing everything</li>
+                        <li>Trust, a transparent process, no dark patterns</li>
+                    </ul>
+                </div>
+                <section class="content-section2 lighter">
+                    <h4>Business Goals</h4>
+                    <ul>
+                        <li>Reduce churn 10–15% via value reminders and downgrades</li>
+                        <li>Structured feedback to prioritise the roadmap</li>
+                        <li>Maintain brand trust with no manipulative UX</li>
+                        <li>Low engineering complexity, static over personalised data</li>
+                    </ul>
+                </section>
+                </div>
+                </section>
+
+        <section class="content-section2 lighter">
+            <h3>User Personas</h3>
+            <p>Three personas, three different reasons for arriving at this screen:</p>
+
+            <div class="findings-grid" style="margin-top:1.5rem;">
+                <div class="finding-card">
+                    <div class="finding-header">
+                        <h4>The Cost-Conscious User</h4>
+                    </div>
+                    <p><em>Pro/Ultra · tight budget</em></p>
+                    <ul>
+                        <li>Wants to know if it's worth the cost</li>
+                        <li>Feels the price is steep, fears losing everything</li>
+                        <li>Needs: a value reminder + a cheaper tier option</li>
+                    </ul>
+                </div>
+                <div class="finding-card">
+                    <div class="finding-header">
+                        <h4>The Feature Non-User</h4>
+                    </div>
+                    <p><em>Premium/Max · subscribed, not using it</em></p>
+                    <ul>
+                        <li>Wants to save passively, without thinking about it</li>
+                        <li>Forgot they even have premium perks</li>
+                        <li>Needs: a tier-specific value reminder + downgrade that keeps the essentials</li>
+                    </ul>
+                </div>
+                <div class="finding-card">
+                    <div class="finding-header">
+                        <h4>The Trust-Focused User</h4>
+                    </div>
+                    <p><em>Any tier · values transparency</em></p>
+                    <ul>
+                        <li>Wants to decide without pressure or tricks</li>
+                        <li>Hates dark patterns and hard-to-find cancel buttons</li>
+                        <li>Needs: an honest flow with a clear, easy-to-find exit</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="image-grid">
+            <div class="columnflex">
+                <h3>Data-Driven Value Anchors</h3>
+                <p>Every value statement is grounded in real tier-wide savings data, specific and credible, without per-user calculations.</p>
+
+                <div class="findings-grid">
+                    <div class="finding-card">
+                        <div class="finding-header">
+                            
+                            <h4>Basic</h4>
+                        </div>
+                        <p>Avg. £143/mo saved · Median £85/mo · 372,574 active users</p>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-header">
+                            
+                            <h4>Plus</h4>
+                        </div>
+                        <p>Avg. £259/mo saved · Median £177/mo · 22,179 active users</p>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-header">
+                            
+                            <h4>Boost</h4>
+                        </div>
+                        <p>Avg. £305/mo saved · Median £211/mo · 4,122 active users</p>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-header">
+                            
+                            <h4>Max</h4>
+                        </div>
+                        <p>Avg. £353/mo saved · Median £232/mo · 8,407 active users</p>
+                    </div>
+                </div>
+                <p>Paid tiers save over double what Basic users save, the headline for Screen 1.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="competitorsection">
+        <h2>Competitor Analysis</h2>
+        <div class="image-grid">
+            <div class="columnflex">
+                <p>I audited cancellation flows across seven category leaders, Netflix, Revolut, Monzo, ClassPass, Foodpanda, Stake, and Coinbase, for patterns to adopt, adapt, or avoid.</p>
+                <img src="../../static/images/plum/competitor-analysis-full.png" alt="Competitor cancellation flow analysis board, 7 apps audited" style="width:100%;">
+            </div>
+        </div>
+
+        <section class="content-section2 darker">
+            <h3>Patterns for Plum</h3>
+            <div class="methodology-grid">
+                <div class="content-section2">
+                    <h4>What Works</h4>
+                    <ul>
+                        <li>Value reminder, tier-specific stats, Revolut-style</li>
+                        <li>A real downgrade path, not just cancel-or-nothing</li>
+                        <li>Transparency on exactly what happens and when</li>
+                        <li>A post-cancel undo button as a safety net</li>
+                    </ul>
+                </div>
+                <section class="content-section2 lighter">
+                    <h4>What To Avoid</h4>
+                    <ul>
+                        <li>Too many screens</li>
+                        <li>No retention attempt at all</li>
+                        <li>Repeating the same message multiple times</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+    </section>
+
+    <section class="content-section" id="designsection">
+        <h2>Design & Strategy</h2>
+        <p>Four screens, four goals: value reminder → soft alternative → feedback → clean exit. One UI, two tier-based content variants.</p>
+
+        <div class="image-grid">
+            <div class="columnflex">
+                <h3>User Flow</h3>
+                <p>I mapped every branch, Keep, Downgrade, Confirm Cancel, so both tier variants share one structure instead of splitting into two flows.</p>
+                <img src="../../static/images/plum/user-flow.png" alt="Cancellation flow decision tree showing all user paths and branch points" style="width:75%;">
+            </div>
+        </div>
+
+
+
+        <div class="image-grid">
+            <div class="columnflex">
+                <h3>Building the Max Perks Value Case</h3>
+                <p>Marketing advertises £888/year in perk value. I used a lower, defensible figure instead, credibility over inflation.</p>
+
+                <div class="findings-grid">
+                    <div class="finding-card">
+                        <div class="finding-header"><div class="finding-icon"><i class="fa-solid fa-film"></i></div><h4>Cineworld</h4></div>
+                        <p>2 tickets/month @ £10, approx. £168/year</p>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-header"><div class="finding-icon"><i class="fa-solid fa-plane"></i></div><h4>Travel Insurance</h4></div>
+                        <p>Worldwide family cover, approx. £80/year</p>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-header"><div class="finding-icon"><i class="fa-solid fa-shield-halved"></i></div><h4>NordVPN Premium</h4></div>
+                        <p>Approx. £60/year</p>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-header"><div class="finding-icon"><i class="fa-solid fa-utensils"></i></div><h4>Tastecard</h4></div>
+                        <p>Approx. £40/year</p>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-header"><div class="finding-icon"><i class="fa-solid fa-dumbbell"></i></div><h4>ClassPass Credits</h4></div>
+                        <p>Approx. £120/year</p>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-header"><div class="finding-icon"><i class="fa-solid fa-calculator"></i></div><h4>Total realistic value</h4></div>
+                        <p>Approx. £468/year for active users</p>
+                    </div>
+                </div>
+                <p class="quote">£450–£550 in annual value. For £14.99/month.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="finalscreens">
+        <h2>Final Screens</h2>
+        <div class="image-grid">
+            <div class="columnflex">
+
+                <h3>Screen 1 · Remind Before You Retain</h3>
+                <div class="final-container2">
+                    <!-- <p>One job: make the value concrete. A single tier-specific stat dominates the screen, with an empathetic tone. "Keep My Plan" is the dominant CTA; "Continue to Cancel" stays a quiet text link.</p> -->
+                    <img src="../../static/images/plum/screen-1-value.png" alt="Screen 1: Value Statement, tier-specific savings statistics" style="width:20%;">
+                </div>
+                <h3>Screen 2 · Data That Drives the Product</h3>
+                <div class="final-container2">
+                    <!-- <p>One required exit reason, too expensive, unused features, bugs, or a competitor. "Next" stays disabled until chosen, so every cancellation becomes labelled roadmap data.</p> -->
+                    <img src="../../static/images/plum/screen-3-feedback.png" alt="Screen 3: Churn reason selection with radio buttons" style="width:50%;">
+                </div>
+                <h3>Screen 3 · A Softer Landing</h3>
+                <div class="final-container2">
+                    <!-- <p>A middle path before the exit: a clear price contrast against a lower tier, with an optional "1 Month Free" for high-value subscribers. "No thanks, continue" stays clearly visible throughout.</p> -->
+                    <img src="../../static/images/plum/screen-2-downgrade.png" alt="Screen 2: Downgrade offer with price contrast between current and lower tier" style="width:50%;">
+                </div>
+
+
+                <h3>Screen 4 · A Clean, Transparent Exit</h3>
+                <div class="final-container2">
+                    <!-- <p>No friction, no guilt: confirms access continues until billing ends and flags which features will pause. A toast and updated profile date close the loop, leaving the door open for a return.</p> -->
+                    <img src="../../static/images/plum/screen-4-confirmation.png" alt="Screen 4: Final cancellation confirmation with billing end date and access notice" style="width:50%;">
+                </div>
+                                <div class="final-container2">
+                                    <p>Full flow</p>
+                    <img src="../../static/images/plum/max-cancellation.png" alt="Screen 4: Final cancellation confirmation with billing end date and access notice" style="width:100%;">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="testingsection">
+        <h2>Impact</h2>
+        <div class="image-grid">
+            <div class="columnflex">
+                <p>Beyond retention: Plum's first structured churn data pipeline, turning every exit into a roadmap signal.</p>
+                <div class="findings-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="metric-trend positive">
+                        <span class="trend-arrow">↓</span>
+                        <span class="trend-value">15%</span>
+                        <p style="color: var(--text-color);">Projected reduction in successful cancellations, aligned with fintech industry benchmarks</p>
+                    </div>
+                    <div class="metric-trend positive">
+                        <span class="trend-arrow">↓</span>
+                        <span class="trend-value">Churn</span>
+                        <p style="color: var(--text-color);">Increased downgrades-over-cancellations, preserving subscriber revenue rather than losing it entirely</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="nav-links2" style="width:100%">
+        <a class="nav-link2" id="navlink1" href="/Projects/plum-upsell">
+            <i class="fa-solid fa-arrow-left"></i> Previous Project
+        </a>
+        <a class="nav-link2" id="navlink2" href="/Projects/eVA">
+            Next Project <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <section id="contact" class="contact lighter">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p class="fade-in" style="margin-bottom:2rem;">Let's have a talk so you can learn more about my work!</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <a href="mailto:ioanna.lazaridou5@gmail.com">
+                        <i class="fas fa-envelope"></i><br>ioanna.lazaridou5@gmail.com
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <a href="https://www.linkedin.com/in/ioanna-lazaridou/" target="_blank">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i><br>Ioanna Lazaridou
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <a href="tel:+123456789">
+                        <i class="fas fa-phone"></i><br>+30 6987171903<br>+44 7818260729
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footnote"><p>© Copyright&nbsp;<span id="demo"></span>&nbsp;Ioanna Lazaridou | All rights reserved.</p></div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
+    <script>
+        var mybutton = document.getElementById("myBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script>
+      function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+    </script>
+    <script>
+        const d = new Date();
+        let year = d.getFullYear();
+        document.getElementById("demo").innerHTML = year;
+    </script>
+    <script src="../../script/theme-script.js"></script>
+</body>
+</html>
