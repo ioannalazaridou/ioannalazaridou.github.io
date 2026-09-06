@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
     <link href="../../static/css/portfolio.css" rel="stylesheet">
-    <link rel="icon" href="../../static/images/plum/JL.png">
+    <link rel="icon" href="../../static/images/JL.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <title>Subscription Cancellation Flow, Plum</title>
     <style>
@@ -35,6 +35,37 @@
         .final-container2 {
             grid-template-columns: 1fr;
             justify-items: center;
+        }
+        .decision-note {
+            max-width: 640px;
+            margin: 0.5rem auto 1.5rem;
+            text-align: center;
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+        .decision-note strong {
+            color: var(--accent-color);
+        }
+        .pattern-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        .pattern-table th, .pattern-table td {
+            text-align: left;
+            padding: 0.6rem 0.8rem;
+            border-bottom: 1px solid rgba(123,63,228,0.15);
+            font-size: 0.95rem;
+        }
+        .pattern-table th {
+            color: var(--accent-color);
+        }
+        .caveat-box {
+            border-left: 3px solid var(--accent-color);
+            padding: 0.75rem 1rem;
+            margin-top: 1.5rem;
+            font-style: italic;
+            opacity: 0.9;
         }
     </style>
 </head>
@@ -71,12 +102,12 @@
     </section>
 
     <section class="project-details">
-        <p>A retention-first, four-screen flow for Plum's paid subscribers, replacing a blunt "are you sure?" prompt with tier-specific value reminders and soft off-ramps, so every exit becomes a structured product signal instead of a silent loss.</p>
+        <p>Plum's existing cancellation flow gave paid subscribers a binary choice: stay or leave, with no value context and no alternative in between. I redesigned it around a simple idea, help users understand what they're already getting, offer a lower-cost path where it fits, and leave transparently if cancelling is still the right call.</p>
 
         <div class="details-grid">
             <div class="detail-item">
                 <h3>Aim</h3>
-                <p>Reduce voluntary churn from Plum's paid tiers by designing an empathetic cancellation flow that deflects cancellations through value reminders, downgrade alternatives, and structured feedback collection</p>
+                <p>Reduce preventable churn from Plum's paid tiers by replacing a blunt cancellation prompt with tier-specific value reminders, a downgrade alternative, and structured feedback capture, without resorting to friction or dark patterns</p>
             </div>
             <div class="detail-item">
                 <h3>Duration</h3>
@@ -115,6 +146,9 @@
         <div class="timeline-item"><a href="#finalscreens">
             <h5>Final Screens</h5>
         </a></div>
+        <div class="timeline-item"><a href="#measuresection">
+            <h5>Designed to Measure</h5>
+        </a></div>
     </section>
 
     <section class="content-section" id="discoverysection">
@@ -123,16 +157,16 @@
             <div class="methodology-grid">
                 <div class="content-section2">
                     <h3>The Problem</h3>
-                    <p>A one-line "are you sure?" prompt gave no value context, no alternative to leaving, and no way to capture why. Internal data pointed to two solvable causes: cost and underused features.</p>
+                    <p>The old flow was a one-line "are you sure?" prompt: no value context, no alternative to leaving, and no way to capture why someone was going. Internal data pointed to two solvable causes behind most cancellations: cost sensitivity and unused features, not dissatisfaction with the product itself.</p>
                 </div>
                 <section class="content-section2 lighter">
                     <h3>Why This Matters</h3>
-                    <p>Fintech benchmarks show optimised cancellation flows cut successful cancellations by 10–15%. Using static, tier-wide value stats instead of live calculations keeps it a high-impact, low-engineering-lift build.</p>
+                    <p>Cancellation isn't necessarily a retention problem, for a meaningful share of users, it's a value-awareness problem. Some weren't leaving because Plum had stopped being worth it; they were leaving because they'd lost sight of what they were already getting. That reframing is what shaped the whole flow.</p>
                 </section>
             </div>
         </section>
 
-        <p class="quote">How might we help users make informed decisions about their subscription by clearly showing the value they're receiving and offering flexible alternatives, so they don't cancel impulsively due to lack of awareness or cost concerns?</p>
+        <p class="quote">How might we help users make an informed decision about their subscription, by showing the value they're already receiving and offering a flexible alternative, so they don't cancel impulsively out of cost concern or forgotten value?</p>
 
         <section class="content-section2 lighter">
             <div class="findings-grid">
@@ -143,7 +177,7 @@
                         </div>
                         <h4>Insight</h4>
                     </div>
-                    <p>An unoptimised cancellation flow is causing preventable churn and lost revenue.</p>
+                    <p>The value of Plum isn't visible at the exact moment users consider leaving, and an unoptimised cancellation flow gives them nothing to weigh it against.</p>
                 </div>
                 <div class="finding-card">
                     <div class="finding-header">
@@ -152,7 +186,7 @@
                         </div>
                         <h4>Problem</h4>
                     </div>
-                    <p>How might we surface real value and flexible alternatives, so users don't cancel impulsively?</p>
+                    <p>How might we surface real value and a flexible alternative, so users don't cancel impulsively before making an informed decision?</p>
                 </div>
                 <div class="finding-card">
                     <div class="finding-header">
@@ -161,7 +195,7 @@
                         </div>
                         <h4>Hypothesis</h4>
                     </div>
-                    <p>Value reminders, downgrade offers, and feedback collection will cut cancellations by 10–15% and turn every exit into product data.</p>
+                    <p>If users see relevant value reminders and are offered an appropriate lower-cost alternative, fewer will complete cancellation, and every exit becomes structured product data.</p>
                 </div>
             </div>
         </section>
@@ -172,11 +206,11 @@
             <div class="methodology-grid">
                 <div class="content-section2">
                     <h4>Background</h4>
-                    <p>No optimised cancellation flow exists, users can cancel directly without understanding what they'd lose or seeing alternatives. Graceful flows industry-wide cut successful cancellations by 10–15% through soft off-ramps like downgrades and pauses.</p>
+                    <p>No optimised cancellation flow existed, users could cancel directly without understanding what they'd lose or seeing any alternative. Graceful, industry-standard flows typically soften the exit with reminders, downgrades, or pauses rather than a hard stop.</p>
                 </div>
                 <section class="content-section2 lighter">
                     <h4>Objective</h4>
-                    <p>Deflect cancellations with tier-specific value reminders and targeted alternatives, while gathering clean churn data, using static tier averages instead of personalised calculations to keep engineering lift low.</p>
+                    <p>Deflect avoidable cancellations with tier-specific value reminders and a targeted downgrade path, while capturing clean churn data, using static tier averages instead of personalised, real-time calculations to keep engineering lift low.</p>
                 </section>
             </div>
         </section>
@@ -193,7 +227,7 @@
                 <section class="content-section2 lighter">
                     <h4>Business Goals</h4>
                     <ul>
-                        <li>Reduce churn 10–15% via value reminders and downgrades</li>
+                        <li>Deflect avoidable cancellations with value reminders and a downgrade path</li>
                         <li>Structured feedback to prioritise the roadmap</li>
                         <li>Maintain brand trust with no manipulative UX</li>
                         <li>Low engineering complexity, static over personalised data</li>
@@ -203,35 +237,35 @@
                 </section>
 
         <section class="content-section2 lighter">
-            <h3>User Personas</h3>
-            <p>Three personas, three different reasons for arriving at this screen:</p>
+            <h3>Three Cancellation Motivations</h3>
+            <p>Rather than full personas, I worked from three cancellation motivations grounded in internal churn data, each shaping the content and branching logic of the flow differently.</p>
 
             <div class="findings-grid" style="margin-top:1.5rem;">
                 <div class="finding-card">
                     <div class="finding-header">
-                        <h4>The Cost-Conscious User</h4>
+                        <h4>01 · "It's too expensive"</h4>
                     </div>
-                    <p><em>Pro/Ultra · tight budget</em></p>
+                    <p><em>Pro/Ultra · cost-sensitive</em></p>
                     <ul>
-                        <li>Wants to know if it's worth the cost</li>
-                        <li>Feels the price is steep, fears losing everything</li>
+                        <li>Wants to know if the subscription is still worth it</li>
+                        <li>Fears losing everything rather than paying less for less</li>
                         <li>Needs: a value reminder + a cheaper tier option</li>
                     </ul>
                 </div>
                 <div class="finding-card">
                     <div class="finding-header">
-                        <h4>The Feature Non-User</h4>
+                        <h4>02 · "I'm not using it"</h4>
                     </div>
-                    <p><em>Premium/Max · subscribed, not using it</em></p>
+                    <p><em>Premium/Max · subscribed, underusing it</em></p>
                     <ul>
-                        <li>Wants to save passively, without thinking about it</li>
-                        <li>Forgot they even have premium perks</li>
-                        <li>Needs: a tier-specific value reminder + downgrade that keeps the essentials</li>
+                        <li>Has forgotten which perks they're already paying for</li>
+                        <li>Wants to save effort, not actively manage the decision</li>
+                        <li>Needs: a tier-specific value reminder + a downgrade that keeps the essentials</li>
                     </ul>
                 </div>
                 <div class="finding-card">
                     <div class="finding-header">
-                        <h4>The Trust-Focused User</h4>
+                        <h4>03 · "I don't trust cancellation flows"</h4>
                     </div>
                     <p><em>Any tier · values transparency</em></p>
                     <ul>
@@ -246,7 +280,7 @@
         <div class="image-grid">
             <div class="columnflex">
                 <h3>Data-Driven Value Anchors</h3>
-                <p>Every value statement is grounded in real tier-wide savings data, specific and credible, without per-user calculations.</p>
+                <p>Every value statement on screen is grounded in real tier-wide savings data rather than a per-user calculation, credible enough to support the message, available with existing data, and lower in engineering effort than live personalisation.</p>
 
                 <div class="findings-grid">
                     <div class="finding-card">
@@ -278,7 +312,7 @@
                         <p>Avg. £353/mo saved · Median £232/mo · 8,407 active users</p>
                     </div>
                 </div>
-                <p>Paid tiers save over double what Basic users save, the headline for Screen 1.</p>
+                <p>Paid tiers save over double what Basic users save on average, the headline for Screen 1, and the evidence-based way to remind users what they were already getting without a personalised calculation.</p>
             </div>
         </div>
     </section>
@@ -287,29 +321,47 @@
         <h2>Competitor Analysis</h2>
         <div class="image-grid">
             <div class="columnflex">
-                <p>I audited cancellation flows across seven category leaders, Netflix, Revolut, Monzo, ClassPass, Foodpanda, Stake, and Coinbase, for patterns to adopt, adapt, or avoid.</p>
+                <p>I audited cancellation flows across seven category leaders, Netflix, Revolut, Monzo, ClassPass, Foodpanda, Stake, and Coinbase, looking for patterns worth adopting, adapting, or deliberately avoiding at Plum.</p>
                 <img src="../../static/images/plum/competitor-analysis-full.png" alt="Competitor cancellation flow analysis board, 7 apps audited" style="width:100%;">
             </div>
         </div>
 
         <section class="content-section2 darker">
-            <h3>Patterns for Plum</h3>
-            <div class="methodology-grid">
-                <div class="content-section2">
-                    <h4>What Works</h4>
-                    <ul>
-                        <li>Value reminder, tier-specific stats, Revolut-style</li>
-                        <li>A real downgrade path, not just cancel-or-nothing</li>
-                        <li>Transparency on exactly what happens and when</li>
-                        <li>A post-cancel undo button as a safety net</li>
-                    </ul>
-                </div>
+            <h3>From Patterns to Plum Decisions</h3>
+            <table class="pattern-table">
+                <tr>
+                    <th>Pattern observed</th>
+                    <th>What I learned</th>
+                    <th>Plum decision</th>
+                </tr>
+                <tr>
+                    <td>Value reminders (Revolut-style)</td>
+                    <td>Users need context before they're asked to leave</td>
+                    <td>Lead with tier-specific savings on Screen 1</td>
+                </tr>
+                <tr>
+                    <td>Downgrade paths</td>
+                    <td>Cancellation doesn't have to be binary</td>
+                    <td>Introduce a lower-cost tier before the exit</td>
+                </tr>
+                <tr>
+                    <td>Transparent timing</td>
+                    <td>Users need to know exactly what happens and when</td>
+                    <td>Spell out access and billing end date on confirmation</td>
+                </tr>
+                <tr>
+                    <td>Post-cancel undo</td>
+                    <td>Users can change their mind</td>
+                    <td>Leave the door open with a clear return path</td>
+                </tr>
+            </table>
+            <div class="methodology-grid" style="margin-top:1.5rem;">
                 <section class="content-section2 lighter">
-                    <h4>What To Avoid</h4>
+                    <h4>What I Deliberately Avoided</h4>
                     <ul>
-                        <li>Too many screens</li>
-                        <li>No retention attempt at all</li>
-                        <li>Repeating the same message multiple times</li>
+                        <li>Too many screens between "cancel" and done</li>
+                        <li>No retention attempt at all, the opposite failure mode</li>
+                        <li>Repeating the same retention message more than once</li>
                     </ul>
                 </section>
             </div>
@@ -318,22 +370,38 @@
 
     <section class="content-section" id="designsection">
         <h2>Design & Strategy</h2>
-        <p>Four screens, four goals: value reminder → soft alternative → feedback → clean exit. One UI, two tier-based content variants.</p>
+        <p>Value-first, not friction-first. Four screens, four goals: understand value → consider an alternative → tell us why → leave cleanly. One UI, two tier-based content variants, so both share a single structure instead of splitting into two flows.</p>
 
         <div class="image-grid">
             <div class="columnflex">
-                <h3>User Flow</h3>
-                <p>I mapped every branch, Keep, Downgrade, Confirm Cancel, so both tier variants share one structure instead of splitting into two flows.</p>
+                <h3>The Cancellation Journey</h3>
+                <p>Mapping every branch, Keep, Downgrade, Confirm Cancel, first meant the logic was settled before a single screen was drawn.</p>
                 <img src="../../static/images/plum/user-flow.png" alt="Cancellation flow decision tree showing all user paths and branch points" style="width:75%;">
             </div>
         </div>
 
-
+        <section class="content-section2 darker">
+            <h3>Three Design Principles</h3>
+            <div class="methodology-grid">
+                <div class="content-section2">
+                    <h4>01 · Value before persuasion</h4>
+                    <p>Show users what they're already getting before asking them to reconsider anything.</p>
+                </div>
+                <section class="content-section2 lighter">
+                    <h4>02 · Alternatives before exit</h4>
+                    <p>Offer a genuinely lower-cost path where it fits the user's situation.</p>
+                </section>
+                <div class="content-section2">
+                    <h4>03 · Transparency throughout</h4>
+                    <p>Retention should never depend on making cancellation hard to find or hard to finish.</p>
+                </div>
+            </div>
+        </section>
 
         <div class="image-grid">
             <div class="columnflex">
-                <h3>Building the Max Perks Value Case</h3>
-                <p>Marketing advertises £888/year in perk value. I used a lower, defensible figure instead, credibility over inflation.</p>
+                <h3>Designing for Credibility, Not Maximum Persuasion</h3>
+                <p>Marketing advertises £888/year in Max perk value. Rather than putting that number on screen, I built an independent, defensible estimate from realistic usage, because an inflated figure would undercut the trust the whole flow depends on.</p>
 
                 <div class="findings-grid">
                     <div class="finding-card">
@@ -358,12 +426,12 @@
                     </div>
                     <div class="finding-card">
                         <div class="finding-header"><div class="finding-icon"><i class="fa-solid fa-calculator"></i></div><h4>Total realistic value</h4></div>
-                        <p>Approx. £468/year for active users</p>
+                        <p>Approx. £468/year for active users, vs. the £888 marketing maximum</p>
                     </div>
                 </div>
-                <p class="quote">£450–£550 in annual value. For £14.99/month.</p>
+                <p class="quote">~£468/year in realistic value, for £14.99/month, a number I could defend, not just advertise.</p>
             </div>
-        </div>
+        </section>
     </section>
 
     <section class="content-section" id="finalscreens">
@@ -371,54 +439,43 @@
         <div class="image-grid">
             <div class="columnflex">
 
-                <h3>Screen 1 · Remind Before You Retain</h3>
+                <h3>Screen 1 · Value Reminder</h3>
                 <div class="final-container2">
-                    <!-- <p>One job: make the value concrete. A single tier-specific stat dominates the screen, with an empathetic tone. "Keep My Plan" is the dominant CTA; "Continue to Cancel" stays a quiet text link.</p> -->
+                    <p class="decision-note"><strong>Decision:</strong> lead with the user's existing value, not the cost of cancelling. A single tier-specific stat dominates the screen.</p>
                     <img src="../../static/images/plum/screen-1-value.png" alt="Screen 1: Value Statement, tier-specific savings statistics" style="width:20%;">
                 </div>
-                <h3>Screen 2 · Data That Drives the Product</h3>
+                                <h3>Screen 2 · Structured Feedback</h3>
                 <div class="final-container2">
-                    <!-- <p>One required exit reason, too expensive, unused features, bugs, or a competitor. "Next" stays disabled until chosen, so every cancellation becomes labelled roadmap data.</p> -->
+                    <p class="decision-note"><strong>Decision:</strong> capture one required reason, too expensive, unused features, bugs, or a competitor, so every completed cancellation becomes labelled roadmap data instead of a silent loss.</p>
                     <img src="../../static/images/plum/screen-3-feedback.png" alt="Screen 3: Churn reason selection with radio buttons" style="width:50%;">
                 </div>
                 <h3>Screen 3 · A Softer Landing</h3>
                 <div class="final-container2">
-                    <!-- <p>A middle path before the exit: a clear price contrast against a lower tier, with an optional "1 Month Free" for high-value subscribers. "No thanks, continue" stays clearly visible throughout.</p> -->
+                    <p class="decision-note"><strong>Decision:</strong> offer a genuinely lower-cost path without hiding the way out. A clear price contrast against a lower tier, plus an optional one-month-free for subscribers who cancel for the first time.</p>
                     <img src="../../static/images/plum/screen-2-downgrade.png" alt="Screen 2: Downgrade offer with price contrast between current and lower tier" style="width:50%;">
                 </div>
 
-
                 <h3>Screen 4 · A Clean, Transparent Exit</h3>
                 <div class="final-container2">
-                    <!-- <p>No friction, no guilt: confirms access continues until billing ends and flags which features will pause. A toast and updated profile date close the loop, leaving the door open for a return.</p> -->
+                    <p class="decision-note"><strong>Decision:</strong> make the consequences explicit, access continues until billing ends, and which features will pause, then get out of the user's way. A toast and updated profile close the loop, leaving the door open to return.</p>
                     <img src="../../static/images/plum/screen-4-confirmation.png" alt="Screen 4: Final cancellation confirmation with billing end date and access notice" style="width:50%;">
                 </div>
-                                <div class="final-container2">
-                                    <p>Full flow</p>
-                    <img src="../../static/images/plum/max-cancellation.png" alt="Screen 4: Final cancellation confirmation with billing end date and access notice" style="width:100%;">
+                <div class="final-container2">
+                    <p>Full flow</p>
+                    <img src="../../static/images/plum/max-cancellation.png" alt="Full cancellation flow across all four screens" style="width:100%;">
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section class="content-section" id="testingsection">
-        <h2>Impact</h2>
+    <section class="content-section" id="testingsection">        <h2>Impact</h2>        <div class="image-grid">            <div class="columnflex">                <p>Beyond retention: Plum's first structured churn data pipeline, turning every exit into a roadmap signal.</p>                <div class="findings-grid" style="grid-template-columns: repeat(2, 1fr);">                    <div class="metric-trend positive">                        <span class="trend-arrow">↓</span>                        <span class="trend-value">15%</span>                        <p style="color: var(--text-color);">Projected reduction in successful cancellations, aligned with fintech industry benchmarks</p>                    </div>                    <div class="metric-trend positive">                        <span class="trend-arrow">↓</span>                        <span class="trend-value">Churn</span>                        <p style="color: var(--text-color);">Increased downgrades-over-cancellations, preserving subscriber revenue rather than losing it entirely</p>                    </div>                </div>            </div>        </div>    </section>
+
+    <section class="content-section" id="reflectionsection">
+        <h2>Reflection</h2>
         <div class="image-grid">
             <div class="columnflex">
-                <p>Beyond retention: Plum's first structured churn data pipeline, turning every exit into a roadmap signal.</p>
-                <div class="findings-grid" style="grid-template-columns: repeat(2, 1fr);">
-                    <div class="metric-trend positive">
-                        <span class="trend-arrow">↓</span>
-                        <span class="trend-value">15%</span>
-                        <p style="color: var(--text-color);">Projected reduction in successful cancellations, aligned with fintech industry benchmarks</p>
-                    </div>
-                    <div class="metric-trend positive">
-                        <span class="trend-arrow">↓</span>
-                        <span class="trend-value">Churn</span>
-                        <p style="color: var(--text-color);">Increased downgrades-over-cancellations, preserving subscriber revenue rather than losing it entirely</p>
-                    </div>
-                </div>
+                <p>The biggest lesson from this project was that retention doesn't have to mean adding friction to the exit. Sometimes the more effective, and more honest, intervention is helping users make a better-informed decision, and being willing to let them go if that's still the right call for them.</p>
             </div>
         </div>
     </section>
